@@ -1,10 +1,13 @@
 .page_main .profile{
-    display: flex;
-    margin: 9em;
+    margin-top: 3em;
+
+    .inner{
+        display: flex;
+    }
     
     .big{
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         border-radius: 70%;
         overflow: hidden;
         margin: 2em;
@@ -17,16 +20,28 @@
     }
 
     .info {
-        h2 {font-size: 3em;}
-        h2 + p {
+        h2 {
+            font-size: 3em;
+        }
 
+        h2 + p {
+          
         }
         .list {
-            
+            display: flex;
+            align-content:space-between;
         }
 
         .thumbs{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
 
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+            }
         }
     }
 }

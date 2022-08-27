@@ -17,6 +17,12 @@
     .gnb{
         ul{
             display: flex;
+            justify-content: space-around;
+            width: 400px;
+
+            li{
+                font-weight: 500;
+            }
         }
     
         
