@@ -41,6 +41,15 @@ img {
   max-width: 100%;
 }
 
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
 .page_header {
   position: absolute;
   left: 0;
@@ -68,6 +77,16 @@ img {
 
 .page_main .area {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_main .profile .inner {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home {
@@ -75,39 +94,135 @@ img {
 }
 
 .page_main .profile {
-  margin-top: 3em;
+  background-color: antiquewhite;
 }
 .page_main .profile .inner {
   display: flex;
+  justify-content: space-between;
+  outline: 1px solid red;
 }
 .page_main .profile .big {
-  width: 300px;
-  height: 300px;
-  border-radius: 70%;
-  overflow: hidden;
-  margin: 2em;
+  flex: 0 0 400px;
+  margin-right: 40px;
 }
-.page_main .profile .big img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.page_main .profile .info {
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.page_main .profile .info article {
+  background: yellow;
 }
 .page_main .profile .info h2 {
-  font-size: 3em;
+  font-size: 48px;
+}
+.page_main .profile .info h2 + p {
+  margin-bottom: 0.67em;
 }
 .page_main .profile .info .list {
   display: flex;
-  align-content: space-between;
+  flex-wrap: wrap;
+  line-height: 1.5;
 }
-.page_main .profile .info .thumbs {
+.page_main .profile .info .list.social {
+  margin-top: 1em;
+}
+.page_main .profile .info .list dt {
+  width: 100px;
+  outline: 1px solid red;
+}
+.page_main .profile .info .list dd {
+  outline: 1px solid blue;
+  width: calc(100% - 100px);
+}
+.page_main .profile .info .social {
+  width: 50%;
+}
+.page_main .profile .info .social a {
+  font-style: italic;
+}
+.page_main .profile .info figure {
+  margin: 0 auto;
+}
+.page_main .profile .info figure figcaption {
+  display: none;
+}
+.page_main .profile .info figure .thumbs {
+  outline: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+.page_main .profile .info figure .thumbs img {
+  width: calc((100% - 30px) / 4);
+}
+
+.test {
+  outline: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.page_main .gallery {
+  background-color: azure;
+}
+.page_main .gallery .inner {
+  max-width: 1500px;
+}
+.page_main .gallery .inner .pics {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.page_main .gallery .inner .pics div {
   width: 300px;
-  height: 200px;
-  overflow: hidden;
+  height: 290px;
 }
-.page_main .profile .info .thumbs img {
+.page_main .gallery .inner .pics img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.page_main .skills {
+  background-color: beige;
+}
+.page_main .skills .inner h2 {
+  padding: 100px 0 0 100px;
+  font-size: 48px;
+}
+
+.page_main .contact .inner h2 {
+  margin: 30px;
+}
+.page_main .contact .inner .content {
+  display: flex;
+  justify-content: center;
+}
+.page_main .contact .inner .content form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.page_main .contact .inner .content form .sub_box {
+  margin-bottom: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+  padding: 10px;
+}
+.page_main .contact .inner .content form textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 20px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.page_main .contact .inner .content form .btn {
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  background-color: red;
+  margin: 0 auto;
+  width: 30%;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

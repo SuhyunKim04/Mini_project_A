@@ -12,13 +12,20 @@ body{
 
 
 // common styles
-.page_main {
+.page_main { 
     .area {
         height:100vh;
-
+        @include flex(center,center);
     }
 }
 
+%base {
+    width:100%; 
+    box-sizing:border-box;
+    max-width:1200px;
+    margin: 0 auto;
+}
+ 
 
 @import 'home','profile','gallery','skills','contact','footer';
 

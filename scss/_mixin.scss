@@ -1,0 +1,9 @@
+@mixin line($color:red) {
+    outline:1px solid $color
+}
+
+@mixin flex ($j:space-between, $a:null){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+}

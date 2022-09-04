@@ -1,49 +1,89 @@
 .page_main .profile{
-    margin-top: 3em;
+    background-color: antiquewhite;
 
     .inner{
-        display: flex;
+        @include flex; 
+        @include line;
+        @extend %base;
     }
     
     .big{
-        width: 300px;
-        height: 300px;
-        border-radius: 70%;
-        overflow: hidden;
-        margin: 2em;
-    
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-        }
+        flex:0 0 400px;
+        margin-right: 40px; 
     }
 
-    .info {
+    .info { 
+        background:red;
+        @include flex;
+        flex-direction:column;
+
+
+        article{ 
+            background:yellow;
+        }
+ 
         h2 {
-            font-size: 3em;
+            font-size: 48px; 
         }
 
         h2 + p {
-          
+            margin-bottom: 0.67em;
         }
+
         .list {
             display: flex;
-            align-content:space-between;
-        }
+            flex-wrap: wrap;  
+            line-height:1.5;
 
-        .thumbs{
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
-
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover; 
+            &.social {
+                margin-top:1em;
             }
+ 
+            dt {
+                width:100px; 
+                @include line;
+            } 
+
+            dd {
+                @include line(blue);
+                width:calc(100% - 100px);
+            }
+
         }
+
+        .social{
+            width : 50%;
+
+            a {
+                font-style: italic;
+            }
+
+        }
+
+        figure{
+            margin: 0 auto;
+
+            figcaption{
+                display: none;
+            }
+
+            .thumbs{
+                @include line;
+                @include flex;
+                img {
+                    width:calc((100% - 30px) / 4)
+                 }
+                
+                 
+                
+            }
+
+        }
+
     }
 }
 
-
+ .test {
+    @include line;
+    @include flex($j:center)
+ }
