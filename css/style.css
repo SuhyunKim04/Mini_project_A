@@ -82,7 +82,7 @@ img {
   align-items: center;
 }
 
-.page_main .gallery .inner, .page_main .profile .inner {
+.page_main .profile .inner {
   width: 100%;
   box-sizing: border-box;
   max-width: 1200px;
@@ -149,52 +149,67 @@ img {
 .page_main .gallery {
   background-color: azure;
 }
-.page_main .gallery .inner {
-  display: flex;
-  justify-content: space-between;
+.page_main .gallery .inner .list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .page_main .gallery .inner .list li {
-  background: no-repeat cover center/center;
+  width: 300px;
+  height: 300px;
+  background: no-repeat center center/cover;
 }
-
-.list li.pic1 {
-  background-image: url("../images/pic1");
+.page_main .gallery .inner .list li:nth-child(0) {
+  background-image: url("../images/pics0.jpg");
 }
-
-.list li.pic2 {
-  background-image: url("../images/pic2");
+.page_main .gallery .inner .list li:nth-child(1) {
+  background-image: url("../images/pics1.jpg");
 }
-
-.list li.pic3 {
-  background-image: url("../images/pic3");
+.page_main .gallery .inner .list li:nth-child(2) {
+  background-image: url("../images/pics2.jpg");
 }
-
-.list li.pic4 {
-  background-image: url("../images/pic4");
+.page_main .gallery .inner .list li:nth-child(3) {
+  background-image: url("../images/pics3.jpg");
 }
-
-.list li.pic5 {
-  background-image: url("../images/pic5");
+.page_main .gallery .inner .list li:nth-child(4) {
+  background-image: url("../images/pics4.jpg");
 }
-
-.list li.pic6 {
-  background-image: url("../images/pic6");
+.page_main .gallery .inner .list li:nth-child(5) {
+  background-image: url("../images/pics5.jpg");
 }
-
-.list li.pic7 {
-  background-image: url("../images/pic7");
+.page_main .gallery .inner .list li:nth-child(6) {
+  background-image: url("../images/pics6.jpg");
 }
-
-.list li.pic8 {
-  background-image: url("../images/pic8");
+.page_main .gallery .inner .list li:nth-child(7) {
+  background-image: url("../images/pics7.jpg");
 }
-
-.list li.pic9 {
-  background-image: url("../images/pic9");
+.page_main .gallery .inner .list li:nth-child(8) {
+  background-image: url("../images/pics8.jpg");
 }
-
-.list li.pic10 {
-  background-image: url("../images/pic10");
+.page_main .gallery .inner .list li:nth-child(9) {
+  background-image: url("../images/pics9.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(10) {
+  background-image: url("../images/pics10.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(11) {
+  background-image: url("../images/pics11.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(12) {
+  background-image: url("../images/pics12.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(13) {
+  background-image: url("../images/pics13.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(14) {
+  background-image: url("../images/pics14.jpg");
+}
+.page_main .gallery .inner .list li:nth-child(15) {
+  background-image: url("../images/pics15.jpg");
+}
+.page_main .gallery .inner .list .cover:hover {
+  background: rgba(192, 191, 191, 0.3);
+  z-index: 1000;
+  position: absolute;
 }
 
 .page_main .skills {
