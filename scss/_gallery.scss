@@ -7,7 +7,7 @@
 
     .list {
       li {
-        background: no-repeat cover center/center;
+        background: no-repeat center center/cover;
 
         @for $i from 1 to 11 {
           &.pic#{$i} {
