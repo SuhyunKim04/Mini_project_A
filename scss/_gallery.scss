@@ -9,9 +9,9 @@
       li {
         background: no-repeat center center/cover;
 
-        @for $i from 1 to 11 {
+        @for $i from 0 to 14 {
           &.pic#{$i} {
-            background-image: url($url + pic#{$i});
+            background-image: url($url + "pics#{$i}.jpg");
           }
         }
       }
