@@ -10,7 +10,7 @@
         background: no-repeat center center/cover;
 
         @for $i from 0 to 14 {
-          &.pic#{$i} {
+          &:nth-child(#{$i}) {
             background-image: url($url + "pics#{$i}.jpg");
           }
         }
