@@ -1,19 +1,20 @@
-.page_main .gallery{
-    background-color:azure;
+.page_main .gallery {
+  background-color: azure;
 
-    .inner{
-        @include flex; 
-        @extend %base;
-    
-        .list{
-                li{
-                    background: no-repeat cover center/center;
-                }
-            }
+  .inner {
+    @include flex;
+    @extend %base;
+
+    .list {
+      li {
+        background: no-repeat cover center/center;
+
+        @for $i from 1 to 11 {
+          &.pic#{$i} {
+            background-image: url($url + pic#{$i});
+          }
         }
+      }
     }
-
-@for $i from 1 to 11 {
-    .list li.pic#{$i} {background-image:url($url + pic#{$i})}
+  }
 }
-
