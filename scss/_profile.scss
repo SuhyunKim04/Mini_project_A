@@ -3,7 +3,6 @@
 
     .inner{
         @include flex; 
-        @include line;
         @extend %base;
     }
     
@@ -13,15 +12,9 @@
     }
 
     .info { 
-        background:red;
         @include flex;
         flex-direction:column;
 
-
-        article{ 
-            background:yellow;
-        }
- 
         h2 {
             font-size: 48px; 
         }
@@ -41,11 +34,11 @@
  
             dt {
                 width:100px; 
-                @include line;
+                
             } 
 
             dd {
-                @include line(blue);
+            
                 width:calc(100% - 100px);
             }
 
@@ -63,12 +56,8 @@
         figure{
             margin: 0 auto;
 
-            figcaption{
-                display: none;
-            }
 
             .thumbs{
-                @include line;
                 @include flex;
                 img {
                     width:calc((100% - 30px) / 4)
@@ -82,8 +71,3 @@
 
     }
 }
-
- .test {
-    @include line;
-    @include flex($j:center)
- }
