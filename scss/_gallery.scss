@@ -1,17 +1,45 @@
 .page_main .gallery {
   background-color: azure;
+  @include flex(stretch, stretch);
+  .list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
-  .inner {
-    @include flex;
-    @extend %base;
+    li {
+      // width: 300px;
+      background: no-repeat center center/cover;
+      position: relative;
 
-    .list {
-      li {
-        background: no-repeat center center/cover;
+      @for $i from 0 to 16 {
+        &:nth-child(#{$i}) {
+          background-image: url($url + "pics#{$i}.jpg");
+        }
+      }
 
-        @for $i from 0 to 14 {
-          &:nth-child(#{$i}) {
-            background-image: url($url + "pics#{$i}.jpg");
+      a {
+        background: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        @include full;
+        @include flex(center, center);
+        color: #fff;
+        transition: 0.4s;
+
+        span {
+          transform: translateX(10px);
+          opacity: 0;
+          transition: 0.8s;
+        }
+      }
+
+      &:hover {
+        a {
+          background: rgba(0, 0, 0, 0.7);
+
+          span {
+            transform: translateX(0);
+            opacity: 1;
           }
         }
       }
