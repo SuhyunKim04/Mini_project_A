@@ -41,6 +41,10 @@ img {
   max-width: 100%;
 }
 
+textarea {
+  resize: none;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -151,12 +155,13 @@ img {
   display: flex;
   justify-content: stretch;
   align-items: stretch;
+  position: relative;
 }
 .page_main .gallery .list {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  flex-grow: 1;
 }
 .page_main .gallery .list li {
   background: no-repeat center center/cover;
@@ -211,8 +216,7 @@ img {
   background-image: url("../images/pics15.jpg");
 }
 .page_main .gallery .list li a {
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   left: 0;
   right: 0;
@@ -230,11 +234,26 @@ img {
   transition: 0.8s;
 }
 .page_main .gallery .list li:hover a {
-  background: 0, 0, 0, 0.7;
+  background: rgba(0, 0, 0, 0.7);
 }
-.page_main .gallery .list li:hover span {
+.page_main .gallery .list li:hover a span {
   transform: translateY(0);
   opacity: 1;
+}
+.page_main .gallery .view_detail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.page_main .gallery .view_detail .contents {
+  position: absolute;
+  background-color: #fff;
+  width: 40%;
+  height: 100%;
+  overflow: auto;
 }
 
 .page_main .skills {
@@ -246,37 +265,29 @@ img {
 }
 
 .page_main .contact .inner h2 {
-  margin: 30px;
+  margin-bottom: 30px;
 }
-.page_main .contact .inner .content {
-  display: flex;
-  justify-content: center;
-}
-.page_main .contact .inner .content form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-.page_main .contact .inner .content form .sub_box {
+.page_main .contact .inner .content .sub_box {
   margin-bottom: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 30px;
   padding: 10px;
 }
-.page_main .contact .inner .content form textarea {
+.page_main .contact .inner .content textarea {
+  display: block;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
   padding: 20px;
   height: 200px;
   margin-bottom: 30px;
 }
-.page_main .contact .inner .content form .btn {
+.page_main .contact .inner .content .btn {
   border-radius: 30px;
   padding: 10px;
   border: none;
   background-color: red;
   margin: 0 auto;
-  width: 30%;
+  width: 100%;
   color: #fff;
 }
 
