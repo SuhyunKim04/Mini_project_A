@@ -255,6 +255,21 @@ textarea {
   height: 100%;
   overflow: auto;
 }
+.page_main .gallery .view_detail .contents h3 {
+  font-size: 2em;
+}
+.page_main .gallery .view_detail .contents .contents_detail {
+  margin: 0.5em;
+}
+.page_main .gallery .view_detail .contents .contents_detail h3 {
+  font-size: 2em;
+}
+.page_main .gallery .view_detail .contents .contents_detail .contents_photo {
+  width: 100%;
+}
+.page_main .gallery .view_detail .contents .contents_detail .contents_photo .contents_small {
+  position: relative;
+}
 
 .page_main .skills {
   background-color: beige;
