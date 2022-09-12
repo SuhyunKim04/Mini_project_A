@@ -7,5 +7,12 @@
             margin: 4em 0 0 4em;
         }
       
+        .skills_list{
+
+            display: flex;
+            flex-direction: column;
+            border: 1px solid red;
+            
+        }
     }
 }
