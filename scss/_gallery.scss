@@ -1,5 +1,4 @@
 .page_main .gallery {
-  background-color: azure;
   @include flex(stretch, stretch);
   position: relative;
 
@@ -52,42 +51,98 @@
     .view_detail{
     @include full;
     background: rgba(0, 0, 0, 0.7);
+    position: absolute;
 
     
 
       .contents{
         position: absolute;
-        background-color: #fff;
+        background-color: #222;
         width: 40%;
         height: 100%;
         overflow: auto;
+        color: #fff;
      
 
         h3{
           font-size: 2em;
+          margin-top: 1em;
         }
 
 
         .contents_detail{
-          margin: 0.5em;
+          margin: 1em;
+          display: flex;
+          flex-direction: column;
+          
 
             h3{
               font-size: 2em;
+              font-weight: 500;
             }
+
+            strong {
+              font-weight: 300;
+              color: rgb(240, 43, 43);
+            }
+            .date{
+              color:rgb(193, 191, 191);
+              margin-bottom: 2em;
+            }
+
+          .contents_text{
+            margin-top: 2em;
+          }
+          .contents_text2{
+            margin-bottom: 1em;
+          }
 
           .contents_photo{
             width: 100%;
+          }
 
-            .contents_small{
-              position: relative;
-
-
-            }
+          .contents_small{
+            @include flex(stretch, stretch);
+            width: 50%;
+            gap: 0.5em;
           }
         }
       
       }
-      
+      .close {
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: red;
+        position: absolute;
+        border: none;
+        left: 45em;
+        top: 1em;
+
+
+
+        &::before{
+          position: absolute;
+          left: 14px;bottom: 8px;
+          content: '';
+          height: 15px;
+          width: 2px;
+          background-color: #000;
+          transform: rotate(45deg);
+          background-color: #fff;
+        }
+
+        &::after{
+          position: absolute;
+          left: 14px;bottom: 8px;
+          content: '';
+          height: 15px;
+          width: 2px;
+          background-color: #000;
+          transform: rotate(-45deg);
+          background-color: #fff;
+        }
+      }
     }
   }
 

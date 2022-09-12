@@ -151,7 +151,6 @@ textarea {
 }
 
 .page_main .gallery {
-  background-color: azure;
   display: flex;
   justify-content: stretch;
   align-items: stretch;
@@ -247,28 +246,84 @@ textarea {
   top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
+  position: absolute;
 }
 .page_main .gallery .view_detail .contents {
   position: absolute;
-  background-color: #fff;
+  background-color: #222;
   width: 40%;
   height: 100%;
   overflow: auto;
+  color: #fff;
 }
 .page_main .gallery .view_detail .contents h3 {
   font-size: 2em;
+  margin-top: 1em;
 }
 .page_main .gallery .view_detail .contents .contents_detail {
-  margin: 0.5em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
 }
 .page_main .gallery .view_detail .contents .contents_detail h3 {
   font-size: 2em;
+  font-weight: 500;
+}
+.page_main .gallery .view_detail .contents .contents_detail strong {
+  font-weight: 300;
+  color: rgb(240, 43, 43);
+}
+.page_main .gallery .view_detail .contents .contents_detail .date {
+  color: rgb(193, 191, 191);
+  margin-bottom: 2em;
+}
+.page_main .gallery .view_detail .contents .contents_detail .contents_text {
+  margin-top: 2em;
+}
+.page_main .gallery .view_detail .contents .contents_detail .contents_text2 {
+  margin-bottom: 1em;
 }
 .page_main .gallery .view_detail .contents .contents_detail .contents_photo {
   width: 100%;
 }
-.page_main .gallery .view_detail .contents .contents_detail .contents_photo .contents_small {
-  position: relative;
+.page_main .gallery .view_detail .contents .contents_detail .contents_small {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 50%;
+  gap: 0.5em;
+}
+.page_main .gallery .view_detail .close {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: red;
+  position: absolute;
+  border: none;
+  left: 45em;
+  top: 1em;
+}
+.page_main .gallery .view_detail .close::before {
+  position: absolute;
+  left: 14px;
+  bottom: 8px;
+  content: "";
+  height: 15px;
+  width: 2px;
+  background-color: #000;
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+.page_main .gallery .view_detail .close::after {
+  position: absolute;
+  left: 14px;
+  bottom: 8px;
+  content: "";
+  height: 15px;
+  width: 2px;
+  background-color: #000;
+  transform: rotate(-45deg);
+  background-color: #fff;
 }
 
 .page_main .skills {
