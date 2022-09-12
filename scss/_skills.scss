@@ -1,11 +1,11 @@
 .page_main .skills{
+    @include flex(stretch, stretch);
     background-color:beige;
 
     .inner{
-        
         h2{
-            padding: 100px 0 0 100px;
-            font-size: 48px;
+            margin: 4em 0 0 4em;
         }
+      
     }
 }
