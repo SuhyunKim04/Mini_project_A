@@ -1,17 +1,23 @@
 .page_main .skills{
-    @include flex(stretch, stretch);
+    @include flex(center, stretch);
     background-color:beige;
 
     .inner{
-        h2{
-            margin: 4em 0 0 4em;
-        }
-      
+       
         .skills_list{
 
             display: flex;
             flex-direction: column;
             border: 1px solid red;
+            width: 100%;
+            
+        }
+
+        .pro{
+            appearance: none;
+            width: 400px;
+            height: 20px;
+            color: #016ee2;
             
         }
     }
