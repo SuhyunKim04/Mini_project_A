@@ -52,16 +52,21 @@
     @include full;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
+    display: none;
 
     
 
       .contents{
         position: absolute;
         background-color: #222;
-        width: 40%;
-        height: 100%;
-        overflow: auto;
+        width: 500px;
         color: #fff;
+        left: -500px;
+
+        .scroll{
+          overflow: auto;
+          height: 100vh;
+        }
      
 
         h3{
@@ -107,41 +112,37 @@
             gap: 0.5em;
           }
         }
+
+        .close {
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          background-color: red;
+          position: absolute;
+          left: calc(100% + 20px);
+          top: 1em;
+          opacity: 0;
+  
+  
+  
+          &::before, &::after{
+            position: absolute;
+            left: 14px;bottom: 8px;
+            content: '';
+            height: 15px;
+            width: 2px;
+            background-color: #000;
+            background-color: #fff;
+          }
+  
+          &:before{
+            transform: rotate(45deg);
+          }
+          &:after{
+            transform: rotate(-45deg);
+          }
+        }
       
-      }
-      .close {
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-        background-color: red;
-        position: absolute;
-        border: none;
-        left: 55em;
-        top: 1em;
-
-
-
-        &::before{
-          position: absolute;
-          left: 14px;bottom: 8px;
-          content: '';
-          height: 15px;
-          width: 2px;
-          background-color: #000;
-          transform: rotate(45deg);
-          background-color: #fff;
-        }
-
-        &::after{
-          position: absolute;
-          left: 14px;bottom: 8px;
-          content: '';
-          height: 15px;
-          width: 2px;
-          background-color: #000;
-          transform: rotate(-45deg);
-          background-color: #fff;
-        }
       }
     }
   }
