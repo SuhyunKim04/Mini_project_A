@@ -41,3 +41,7 @@ change.addEventListener('click', ()=> {
     big.setAttribute('src', './images/profile_${i}_big.jpg')
 })
 
+test.addEventListener('click', ()=> {
+    big.getAttribute('src')
+})
+console.
