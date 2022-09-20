@@ -35,13 +35,38 @@ remove.addEventListener('click', ()=>{
 const change = document.querySelector('.btnImage')
 const big = document.querySelector('.bigImg');
 const test = document.querySelector('.test')
-big.setAttribute('src','a.jpg')
+ 
 
 change.addEventListener('click', ()=> {
     big.setAttribute('src', './images/profile_${i}_big.jpg')
 })
 
-test.addEventListener('click', ()=> {
-    big.getAttribute('src')
+test.addEventListener('click', (e)=> {
+    console.log(e.target)
+    const src = test.getAttribute('src')
+    console.log(src);
+}) 
+
+const pets = ['puppy','cat','lion','tiger','wale','rabbit']
+// for(let i = 0; i < pets.length; i++){
+//     console.log(pets[i])
+// }
+
+for(const pet of pets) {
+    console.log(pet)
+}
+for(const i in pets) {
+    console.log(i)
+}
+
+pets.forEach( (e,idx) => {
+    console.log(e, idx)
 })
-console.
+
+const view = document.querySelector('.view_detail')
+const gallery =document.querySelector('.gallery .list a');
+gallery.addEventListener('click',(e) => {
+    // e.preventDefault();
+    gallery.classList.add('view')
+    console.log(view)
+})
