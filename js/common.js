@@ -63,10 +63,10 @@ pets.forEach( (e,idx) => {
     console.log(e, idx)
 })
 
-const view = document.querySelector('.view_detail')
+const view = document.querySelector('.contents')
 const gallery =document.querySelector('.gallery .list a');
 gallery.addEventListener('click',(e) => {
     // e.preventDefault();
-    gallery.classList.add('view_detail')
-    console.log(view)
+    gallery.classList.add('contents')
+    // console.log(view)
 })
