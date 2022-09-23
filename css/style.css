@@ -324,7 +324,7 @@ button {
   background-color: #222;
   width: 500px;
   color: #fff;
-  left: -500px;
+  left: 500px;
 }
 .page_main .gallery .view_detail .contents .scroll {
   overflow: auto;
