@@ -48,9 +48,9 @@ test.addEventListener('click', (e)=> {
 }) 
 
 const pets = ['puppy','cat','lion','tiger','wale','rabbit']
-// for(let i = 0; i < pets.length; i++){
-//     console.log(pets[i])
-// }
+for(let i = 0; i < pets.length; i++){
+    console.log(pets[i])
+}
 
 for(const pet of pets) {
     console.log(pet)
