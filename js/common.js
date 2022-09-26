@@ -10,21 +10,21 @@ window.addEventListener('scroll', () => {
 
 
 
-const btn = document.querySelector(".btnScroll")
+// const btn = document.querySelector(".btnScroll")
 
-btn.addEventListener('click', ()=> {
-    console.log(window.pageYOffset)
-})
+// btn.addEventListener('click', ()=> {
+//     console.log(window.pageYOffset)
+// })
 
-const add = document.querySelector('.add')
-add.addEventListener('click', ()=>{
-    header.classList.add("sticky")
-})
+// const add = document.querySelector('.add')
+// add.addEventListener('click', ()=>{
+//     header.classList.add("sticky")
+// })
 
-const remove = document.querySelector('.remove')
-remove.addEventListener('click', ()=>{
-    header.classList.remove("sticky")
-})
+// const remove = document.querySelector('.remove')
+// remove.addEventListener('click', ()=>{
+//     header.classList.remove("sticky")
+// })
 
 
 // const btnClass = document.querySelectorAll('.btnClass');
@@ -37,14 +37,14 @@ const big = document.querySelector('.bigImg');
 const test = document.querySelector('.test')
  
 
-change.addEventListener('click', ()=> {
-    big.setAttribute('src', './images/profile_${i}_big.jpg')
-})
+// change.addEventListener('click', ()=> {
+//     big.setAttribute('src', './images/profile_${i}_big.jpg')
+// })
 
 test.addEventListener('click', (e)=> {
     console.log(e.target)
     const src = test.getAttribute('src')
-    console.log(src);
+    
 }) 
 
 const pets = ['puppy','cat','lion','tiger','wale','rabbit']

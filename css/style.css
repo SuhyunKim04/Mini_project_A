@@ -215,6 +215,7 @@ button {
 .page_main .profile .info figure .thumbs {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .page_main .profile .info figure .thumbs img {
   width: calc((100% - 30px) / 4);
