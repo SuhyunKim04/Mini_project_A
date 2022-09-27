@@ -8,11 +8,11 @@
     align-items: center;
     z-index: 9999;
     transition:0.4s;
-    color: #fff;
+    color: rgb(0, 0, 0);
 
     &.sticky{
         position: fixed;
-        background-color: rgb(59, 55, 55);
+        background-color: rgba(167, 188, 252, 0.755);
         
     }
 

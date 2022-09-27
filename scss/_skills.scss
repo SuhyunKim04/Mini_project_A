@@ -1,9 +1,11 @@
 .page_main .skills{
     @include flex(center, stretch);
-    background-color:beige;
+    
 
     .inner{
-       
+       h2{
+        margin: 3em 0;
+       }
         .skills_list{
 
             display: flex;

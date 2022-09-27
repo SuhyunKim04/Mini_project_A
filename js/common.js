@@ -67,6 +67,8 @@ const view = document.querySelector('.contents_detail')
 const gallery =document.querySelector('.gallery .list a');
 gallery.addEventListener('click',(e) => {
     // e.preventDefault();
-    gallery.classList.add('contents_detail')
+    gallery.classList.add('view')
     console.log(view)
 })
+
+

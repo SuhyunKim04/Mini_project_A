@@ -70,11 +70,11 @@ button {
   align-items: center;
   z-index: 9999;
   transition: 0.4s;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .page_header.sticky {
   position: fixed;
-  background-color: rgb(59, 55, 55);
+  background-color: rgba(167, 188, 252, 0.755);
 }
 .page_header .logo img {
   margin-top: 6px;
@@ -399,7 +399,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  background-color: beige;
+}
+.page_main .skills .inner h2 {
+  margin: 3em 0;
 }
 .page_main .skills .inner .skills_list {
   display: flex;
