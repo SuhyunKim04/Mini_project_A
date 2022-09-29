@@ -447,4 +447,11 @@ button {
   align-items: center;
 }
 
+.page_footer {
+  display: flex;
+  background-color: rgb(218, 206, 206);
+  justify-content: center;
+  padding: 3em;
+}
+
 /*# sourceMappingURL=style.css.map */
