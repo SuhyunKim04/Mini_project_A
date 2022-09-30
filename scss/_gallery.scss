@@ -47,21 +47,32 @@
         }
       }
     }
+    .dimm {
+      @include full(fixed);
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      z-index: 1000;
+    }
+    .view_detail{ 
+      position: fixed;
+      background-color: #222;
+      width: 500px;
+      color: #fff;
+      left: 0;
+      top:0;
+      transition:0.8s;
+      transform: translateX(-500px);
+      z-index:1001;
 
-    .view_detail{
-    @include full;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    display: none;
-
-    
+      &.open {
+        transform:translateX(0);
+        .contents .close {
+          opacity:1;
+          transform:translateX(0);
+        }
+      }
 
       .contents{
-        position: absolute;
-        background-color: #222;
-        width: 500px;
-        color: #fff;
-        left: 500px;
 
         .scroll{
           overflow: auto;
@@ -122,6 +133,8 @@
           left: calc(100% + 20px);
           top: 1em;
           opacity: 0;
+          transform:translateX(20px);
+          transition:all 0.4s 0.8s;
   
   
   
