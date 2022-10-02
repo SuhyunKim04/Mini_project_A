@@ -19,18 +19,25 @@ const getOffset = () => {
 } 
 
 const viewProfile = () => {
-    const change = document.querySelector('.btnImage') 
+    const thumbs = document.querySelector('.test') 
     const big = document.querySelector('.bigImg');
+
+    thumbs.addEventListener('click', (e) => {
+        big.setAttribute('src', './images/profile_3_big.jpg');
+    })
+
 }
+
+viewProfile();
   
  
 const viewGallery = () => {
     const position = getOffset()
     const dimm = document.querySelector('.dimm')
     const view = document.querySelector('.view_detail')
-    const gallery =document.querySelector('.gallery .list a');
+    const gallery =document.querySelectorAll('.gallery .list a')
+    for( let pic in pics) 
     gallery.addEventListener('click',(e) => {
-        // e.preventDefault();
         dimm.style.display = 'block'
         window.scrollTo(0, position);
         view.classList.add('open')
