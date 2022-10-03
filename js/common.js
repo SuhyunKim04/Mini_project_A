@@ -17,7 +17,6 @@ const getOffset = () => {
     const section = document.querySelector('.gallery') 
     return section.offsetTop;
 } 
-
 const viewProfile = () => {
     const thumbs = document.querySelector('.test') 
     const big = document.querySelector('.bigImg');
