@@ -18,24 +18,32 @@ const getOffset = () => {
     return section.offsetTop;
 } 
 const viewProfile = () => {
-    const thumbs = document.querySelector('.test') 
+    const thumbs = document.querySelector('.thumbs') 
     const big = document.querySelector('.bigImg');
 
     thumbs.addEventListener('click', (e) => {
-        big.setAttribute('src', './images/profile_3_big.jpg');
+        big.setAttribute('src', './images/profile_2_big.jpg');
     })
 
 }
 
 viewProfile();
-  
- 
+
+
+// for(let i = 0; i < 15; i++) {
+
+// }
+
+let pics = [];
 const viewGallery = () => {
     const position = getOffset()
     const dimm = document.querySelector('.dimm')
     const view = document.querySelector('.view_detail')
-    const gallery =document.querySelectorAll('.gallery .list a')
-    for( let pic in pics) 
+    const gallery =document.querySelector('.gallery .list a')
+
+    for(let i = 0; i < gallery.length; i++) {
+        console.log(gallery[i])
+    }
     gallery.addEventListener('click',(e) => {
         dimm.style.display = 'block'
         window.scrollTo(0, position);
