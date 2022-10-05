@@ -9,6 +9,15 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset {
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
@@ -275,53 +284,50 @@ button {
   background: no-repeat center center/cover;
   position: relative;
 }
-.page_main .gallery .list li:nth-child(0) {
+.page_main .gallery .list li:nth-child(1) {
   background-image: url("../images/pics0.jpg");
 }
-.page_main .gallery .list li:nth-child(1) {
+.page_main .gallery .list li:nth-child(2) {
   background-image: url("../images/pics1.jpg");
 }
-.page_main .gallery .list li:nth-child(2) {
+.page_main .gallery .list li:nth-child(3) {
   background-image: url("../images/pics2.jpg");
 }
-.page_main .gallery .list li:nth-child(3) {
+.page_main .gallery .list li:nth-child(4) {
   background-image: url("../images/pics3.jpg");
 }
-.page_main .gallery .list li:nth-child(4) {
+.page_main .gallery .list li:nth-child(5) {
   background-image: url("../images/pics4.jpg");
 }
-.page_main .gallery .list li:nth-child(5) {
+.page_main .gallery .list li:nth-child(6) {
   background-image: url("../images/pics5.jpg");
 }
-.page_main .gallery .list li:nth-child(6) {
+.page_main .gallery .list li:nth-child(7) {
   background-image: url("../images/pics6.jpg");
 }
-.page_main .gallery .list li:nth-child(7) {
+.page_main .gallery .list li:nth-child(8) {
   background-image: url("../images/pics7.jpg");
 }
-.page_main .gallery .list li:nth-child(8) {
+.page_main .gallery .list li:nth-child(9) {
   background-image: url("../images/pics8.jpg");
 }
-.page_main .gallery .list li:nth-child(9) {
+.page_main .gallery .list li:nth-child(10) {
   background-image: url("../images/pics9.jpg");
 }
-.page_main .gallery .list li:nth-child(10) {
+.page_main .gallery .list li:nth-child(11) {
   background-image: url("../images/pics10.jpg");
 }
-.page_main .gallery .list li:nth-child(11) {
+.page_main .gallery .list li:nth-child(12) {
   background-image: url("../images/pics11.jpg");
 }
-.page_main .gallery .list li:nth-child(12) {
+.page_main .gallery .list li:nth-child(13) {
   background-image: url("../images/pics12.jpg");
 }
-.page_main .gallery .list li:nth-child(13) {
+.page_main .gallery .list li:nth-child(14) {
   background-image: url("../images/pics13.jpg");
 }
-.page_main .gallery .list li:nth-child(14) {
-  background-image: url("../images/pics14.jpg");
-}
 .page_main .gallery .list li:nth-child(15) {
-  background-image: url("../images/pics15.jpg");
+  background-image: url("../images/pics14.jpg");
 }
 .page_main .gallery .list li a {
   background: rgba(0, 0, 0, 0);

@@ -13,9 +13,9 @@
       background: no-repeat center center/cover;
       position: relative;
 
-        @for $i from 0 to 16 {
+        @for $i from 1 through 15 {
           &:nth-child(#{$i}) {
-            background-image: url($url + "pics#{$i}.jpg");
+            background-image: url($url + "pics#{$i - 1}.jpg");
 
           }
         }
