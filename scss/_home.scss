@@ -1,3 +1,33 @@
 .home{ 
     background: url($url + "fox.jpg") no-repeat center center/cover; 
 }
+
+.add {
+    background-color: #C1EEFF;
+    position: relative;
+
+    .hill{
+        position: absolute;
+        bottom:0;
+    }
+
+    .sun{
+        position: absolute;
+        top:20px;left: 20px;
+    }
+    .cloud{
+        position: absolute;
+        left :10px;top:150px;
+        animation:moveCloud 10s infinite alternate both;
+    }
+
+    @keyframes moveCloud {
+        0% {left:-300px}
+        100%{left:100% }
+    }
+
+    .flowers{
+        position: relative;
+        z-index: 222;
+    }
+}

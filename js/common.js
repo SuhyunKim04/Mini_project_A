@@ -33,17 +33,14 @@ viewProfile();
 // for(let i = 0; i < 15; i++) {
 
 // }
+gallery.forEach((list) => console.log(list))
 
-let pics = [];
 const viewGallery = () => {
     const position = getOffset()
     const dimm = document.querySelector('.dimm')
     const view = document.querySelector('.view_detail')
     const gallery =document.querySelector('.gallery .list a')
-
-    for(let i = 0; i < gallery.length; i++) {
-        console.log(gallery[i])
-    }
+   
     gallery.addEventListener('click',(e) => {
         dimm.style.display = 'block'
         window.scrollTo(0, position);
