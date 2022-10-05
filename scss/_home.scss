@@ -21,6 +21,12 @@
         animation:moveCloud 10s infinite alternate both;
     }
 
+    .cloud1{
+        position: absolute;
+        right: 10px;
+        animation:moveCloud 20s infinite alternate-reverse both;
+    }
+
     @keyframes moveCloud {
         0% {left:-300px}
         100%{left:100% }
