@@ -110,6 +110,156 @@ const datas = [
         image : './images/pics4.jpg'
 
     },
+    {
+        id:5,
+        title : 'aurora',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics5.jpg" alt="pics5">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics5.jpg'
+
+    },
+    {
+        id:6,
+        title : 'mountain',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics6.jpg" alt="pics6">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics6.jpg'
+
+    },
+    {
+        id:7,
+        title : 'ottawa',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics7.jpg" alt="pics7">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics7.jpg'
+
+    },
+    {
+        id:8,
+        title : 'sky',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics8.jpg" alt="pics8">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics8.jpg'
+
+    },
+    {
+        id:9,
+        title : 'snow fields',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics9.jpg" alt="pics9">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics9.jpg'
+
+    },
+    {
+        id:10,
+        title : 'star',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics10.jpg" alt="pics9">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics10.jpg'
+
+    },
+    {
+        id:11,
+        title : 'fall',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics11.jpg" alt="pics1">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics11.jpg'
+
+    },
+    {
+        id:12,
+        title : 'glow',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics12.jpg" alt="pics1">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics12.jpg'
+
+    },
+    {
+        id:13,
+        title : 'tulip',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics13.jpg" alt="pics1">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics13.jpg'
+
+    },
+    {
+        id:14,
+        title : 'wooyoo',
+        date : '2022-09-08',
+        category : 'Artworks',
+        type : 'Photo',
+        description :`<p class="contents_text">이른아침문득, 이런 생각이 들었다</p>
+        <p class="contents_text2">외로워보이지만 외롭지 않은 혼자만의 싸움</p>
+        <div class="contents_small">
+            <img src="./images/pics14.jpg" alt="pics1">
+            <img src="./images/pics15.jpg" alt="pics15">
+        </div>`,
+        image : './images/pics14.jpg'
+
+    },
 ]
 // gallery.forEach((list) => console.log(list))
 
