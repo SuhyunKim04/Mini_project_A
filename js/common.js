@@ -263,14 +263,6 @@ const datas = [
 ]
 // gallery.forEach((list) => console.log(list))
 
-/*
-<img class="contents_photo" src="./images/pics15.jpg" alt="pics0">
-<h3 class="title">WooYoo in Toronto</h3>
-<strong class="date">2022-09-08</strong>
-<strong class="category">Artworks</strong>
-<strong class="type">사진</strong>
-<div class="description">
-*/
 
 const viewDetail = () => {
     const view = document.querySelector('.view_detail')
