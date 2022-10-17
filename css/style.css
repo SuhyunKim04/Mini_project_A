@@ -197,7 +197,7 @@ button {
   position: absolute;
   left: 10px;
   top: 150px;
-  animation: moveCloud 10s infinite alternate both;
+  animation: moveCloud 20s infinite alternate both;
 }
 .add .cloud1 {
   position: absolute;
