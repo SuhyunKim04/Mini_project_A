@@ -1,46 +1,82 @@
 .page_main .skills{
-    @include flex(center, stretch);
+    @include flex(center);
     
 
     .inner{
+        outline:1px solid blue;
+        @extend %base;
        h2{
         margin: 2em 0;
-        font-size: 40px;
+        font-size: 25px;
        }
         .skills_list{
-
-            display: flex;
-            flex-direction: column;
-            border: 1px solid red;
-            width: 100%;
+            outline:1px solid red;
+            display: grid;
+            grid-gap: 5vh;
+            // display: flex;
+            // flex-direction: column;
+            // border: 1px solid red;
+            // width: 100%;
 
             li{
-                justify-content: space-evenly;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                $size : 48px, 48px,48px,62px,64px;
+                $bg : #E85832, #379CE2, #E9AD39, #CD63AD, #1469AA;
+                $delay: 0, 0.1s, 0.2s, 0.3s, 0.4s;
+    
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        img {
+                            width:nth($size, $i)
+                        }
+
+                        progress::-webkit-progress-value {
+                            background-color: nth($bg, $i);
+                            transition-delay: nth($delay, $i);
+                        }
+                    }
+                }
+ 
 
                 strong{
                     font-size: 25px;
                     font-weight: 200;
+                    flex-basis:100px;
+                    background-color:yellow;
+                    text-align:right;
+
+                    &:after{
+                        content: '%';
+                    }
                 }
+
+               span{
+                flex-basis:120px;
+               }
             }
             
         }
 
         .pro{
             appearance: none;
-            width: 400px;
-            height: 20px;
-            color: #016ee2;
+            flex-grow:1;
             
             
         }
+        
         progress::-webkit-progress-bar {
             background: rgb(199, 199, 199);
             border-radius: 10px;
             
         } /* Chrome */
         progress::-webkit-progress-value {
-            background:#c88ce4;
+            
             border-radius: 10px;
+            transition-property: all;
+            transition-duration: 0.4s;
         } /* Chrome */
         
 

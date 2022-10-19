@@ -169,7 +169,7 @@ button {
   align-items: center;
 }
 
-.page_main .profile .inner {
+.page_main .skills .inner, .page_main .profile .inner {
   width: 100%;
   box-sizing: border-box;
   max-width: 1200px;
@@ -455,42 +455,86 @@ button {
 .page_main .skills {
   display: flex;
   justify-content: center;
-  align-items: stretch;
 }
 .page_main .skills .inner {
+  outline: 1px solid blue;
   /* Chrome */
   /* Chrome */
 }
 .page_main .skills .inner h2 {
   margin: 2em 0;
-  font-size: 40px;
+  font-size: 25px;
 }
 .page_main .skills .inner .skills_list {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid red;
-  width: 100%;
+  outline: 1px solid red;
+  display: grid;
+  grid-gap: 5vh;
 }
 .page_main .skills .inner .skills_list li {
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page_main .skills .inner .skills_list li:nth-child(1) img {
+  width: 48px;
+}
+.page_main .skills .inner .skills_list li:nth-child(1) progress::-webkit-progress-value {
+  background-color: #E85832;
+  transition-delay: 0;
+}
+.page_main .skills .inner .skills_list li:nth-child(2) img {
+  width: 48px;
+}
+.page_main .skills .inner .skills_list li:nth-child(2) progress::-webkit-progress-value {
+  background-color: #379CE2;
+  transition-delay: 0.1s;
+}
+.page_main .skills .inner .skills_list li:nth-child(3) img {
+  width: 48px;
+}
+.page_main .skills .inner .skills_list li:nth-child(3) progress::-webkit-progress-value {
+  background-color: #E9AD39;
+  transition-delay: 0.2s;
+}
+.page_main .skills .inner .skills_list li:nth-child(4) img {
+  width: 62px;
+}
+.page_main .skills .inner .skills_list li:nth-child(4) progress::-webkit-progress-value {
+  background-color: #CD63AD;
+  transition-delay: 0.3s;
+}
+.page_main .skills .inner .skills_list li:nth-child(5) img {
+  width: 64px;
+}
+.page_main .skills .inner .skills_list li:nth-child(5) progress::-webkit-progress-value {
+  background-color: #1469AA;
+  transition-delay: 0.4s;
 }
 .page_main .skills .inner .skills_list li strong {
   font-size: 25px;
   font-weight: 200;
+  flex-basis: 100px;
+  background-color: yellow;
+  text-align: right;
+}
+.page_main .skills .inner .skills_list li strong:after {
+  content: "%";
+}
+.page_main .skills .inner .skills_list li span {
+  flex-basis: 120px;
 }
 .page_main .skills .inner .pro {
   appearance: none;
-  width: 400px;
-  height: 20px;
-  color: #016ee2;
+  flex-grow: 1;
 }
 .page_main .skills .inner progress::-webkit-progress-bar {
   background: rgb(199, 199, 199);
   border-radius: 10px;
 }
 .page_main .skills .inner progress::-webkit-progress-value {
-  background: #c88ce4;
   border-radius: 10px;
+  transition-property: all;
+  transition-duration: 0.4s;
 }
 
 .page_main .contact .inner h2 {
