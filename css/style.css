@@ -457,8 +457,13 @@ button {
   justify-content: center;
   align-items: stretch;
 }
+.page_main .skills .inner {
+  /* Chrome */
+  /* Chrome */
+}
 .page_main .skills .inner h2 {
-  margin: 3em 0;
+  margin: 2em 0;
+  font-size: 40px;
 }
 .page_main .skills .inner .skills_list {
   display: flex;
@@ -466,11 +471,26 @@ button {
   border: 1px solid red;
   width: 100%;
 }
+.page_main .skills .inner .skills_list li {
+  justify-content: space-evenly;
+}
+.page_main .skills .inner .skills_list li strong {
+  font-size: 25px;
+  font-weight: 200;
+}
 .page_main .skills .inner .pro {
   appearance: none;
   width: 400px;
   height: 20px;
   color: #016ee2;
+}
+.page_main .skills .inner progress::-webkit-progress-bar {
+  background: rgb(199, 199, 199);
+  border-radius: 10px;
+}
+.page_main .skills .inner progress::-webkit-progress-value {
+  background: #c88ce4;
+  border-radius: 10px;
 }
 
 .page_main .contact .inner h2 {
