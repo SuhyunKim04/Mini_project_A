@@ -1,7 +1,7 @@
 function scrollHeader () {
     const header = document.querySelector('.page_header')
     window.addEventListener('scroll', () => {
-        console.log(window.pageYOffset);
+        // console.log(window.pageYOffset);
         if(window.pageYOffset > 270){
             header.classList.add('sticky')
         }else{

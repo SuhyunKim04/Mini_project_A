@@ -457,7 +457,6 @@ button {
   justify-content: center;
 }
 .page_main .skills .inner {
-  outline: 1px solid blue;
   /* Chrome */
   /* Chrome */
 }
@@ -466,7 +465,6 @@ button {
   font-size: 25px;
 }
 .page_main .skills .inner .skills_list {
-  outline: 1px solid red;
   display: grid;
   grid-gap: 5vh;
 }
@@ -514,7 +512,6 @@ button {
   font-size: 25px;
   font-weight: 200;
   flex-basis: 100px;
-  background-color: yellow;
   text-align: right;
 }
 .page_main .skills .inner .skills_list li strong:after {

@@ -3,14 +3,13 @@
     
 
     .inner{
-        outline:1px solid blue;
         @extend %base;
        h2{
         margin: 2em 0;
         font-size: 25px;
        }
         .skills_list{
-            outline:1px solid red;
+            
             display: grid;
             grid-gap: 5vh;
             // display: flex;
@@ -45,7 +44,6 @@
                     font-size: 25px;
                     font-weight: 200;
                     flex-basis:100px;
-                    background-color:yellow;
                     text-align:right;
 
                     &:after{
