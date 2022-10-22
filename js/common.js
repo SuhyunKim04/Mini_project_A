@@ -364,33 +364,44 @@ window.addEventListener('resize', function() {
     viewDetail();
 })
 
-const setSkillsValue = () => {
-    const bars = document.querySelectorAll('.pro')
-    const btn = document.querySelector('.show-value')
+// const setSkillsValue = () => {
+//     const bars = document.querySelectorAll('.pro')
+//     const btn = document.querySelector('.show-value')
 
-    const showValues = () => {
-        // window.addEventListener('scroll', () => {
-        //     if(window.pageYoffset > 2860) {}
-        // })
-        bars.forEach((e, idx) => {
-            e.value = e.nextElementSibling.innerHTML 
-            console.log(idx, e.value)
-        })
-    }
-    btn.addEventListener('click', showValues)
+//     const showValues = () => {
+//         bars.forEach((e, idx) => {
+//             e.value = e.nextElementSibling.innerHTML 
+//             console.log(idx, e.value)
+//         })
+//     }
+//     btn.addEventListener('click', showValues)
 
-}
+// }
+// setSkillsValue();
 
-setSkillsValue();
 
-function scrollSkills() {
-    const bars = document.querySelectorAll('.pro')
 
-    window.addEventListener('scroll', () =>{
-        if(window.pageYoffset > 2680) {
-            bars.forEach((e, idx) => {
-                e.value = e.nextElementSibling.innerHTML
-            })
-        }return scrollSkills.bars
+const skillSection = document.querySelector('.show-value');
+const progressbars = document.querySelectorAll('.pro');
+
+function showProgress(){
+    progressbars.forEach((e, idx) => {
+        e.value = e.nextElementSibling.innerHTML 
+        console.log(idx, e.value)
     })
 }
+function hideProgress(){
+    
+}
+
+window.addEventListener('scroll', () => {
+    const sectionPos = skillSection.getBoundingClientRect().top;
+    const screenPos = window.pageYoffset;
+
+    if(sectionPos < 3500) {
+        showProgress();
+    }else{
+        hideProgress();
+    }
+})
+ 
