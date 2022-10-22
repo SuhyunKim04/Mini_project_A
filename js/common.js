@@ -1,7 +1,7 @@
 function scrollHeader () {
     const header = document.querySelector('.page_header')
     window.addEventListener('scroll', () => {
-        // console.log(window.pageYOffset);
+        console.log(window.pageYOffset);
         if(window.pageYOffset > 270){
             header.classList.add('sticky')
         }else{
@@ -369,6 +369,9 @@ const setSkillsValue = () => {
     const btn = document.querySelector('.show-value')
 
     const showValues = () => {
+        // window.addEventListener('scroll', () => {
+        //     if(window.pageYoffset > 2860) {}
+        // })
         bars.forEach((e, idx) => {
             e.value = e.nextElementSibling.innerHTML 
             console.log(idx, e.value)
@@ -379,3 +382,15 @@ const setSkillsValue = () => {
 }
 
 setSkillsValue();
+
+function scrollSkills() {
+    const bars = document.querySelectorAll('.pro')
+
+    window.addEventListener('scroll', () =>{
+        if(window.pageYoffset > 2680) {
+            bars.forEach((e, idx) => {
+                e.value = e.nextElementSibling.innerHTML
+            })
+        }return scrollSkills.bars
+    })
+}
