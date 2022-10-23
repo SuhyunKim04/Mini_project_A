@@ -1,0 +1,46 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+.scroll-progress{
+    width: 0;
+    background-color: #F1C40F;
+    height: 3px;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1{
+    background-color: #1B2631;
+}
+
+.section-2{
+    background-color: #424949;
+}
+
+.section-3{
+    background-color: #4D5656;
+}
+
+.section-4{
+    background-color: #626567;
+}
