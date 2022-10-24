@@ -396,9 +396,9 @@ function hideProgress(){
 
 window.addEventListener('scroll', () => {
     const sectionPos = skillSection.getBoundingClientRect().top;
-    const screenPos = window.pageYoffset;
+    const screenPos = window.innerHeight;
 
-    if(window.pageYOffset > 2900) {
+    if(screenPos > sectionPos) {
         showProgress();
     }else{
         hideProgress();
