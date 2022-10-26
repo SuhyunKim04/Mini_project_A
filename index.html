@@ -260,16 +260,29 @@
               
 
                 <div class="content">
-                    <form>
-                        <div>
-                            <label for="" class="blind">Title</label>
-                            <input class="sub_box"type="text" name="subject" placeholder="제목입력">
-                            <textarea type="text" name="content" placeholder="내용입력"></textarea>
-                            <input class="btn" type="button" name="btn" value="SEND MESSAGE">
-                            <input type="hidden">
-                        </div>
-                    </form>
+                    <div class="create">
+                        <form>
+                            <div>
+                                <label for="" class="blind">Title</label>
+                                <input class="sub_box"type="text" name="subject" placeholder="제목입력">
+                                <select class="select">
+                                    <option>채용문의</option>
+                                    <option>프로젝트 문의</option>
+                                    <option>기타</option>
+                                </select>
+                                <textarea  class="msg" type="text" name="content" placeholder="내용입력"></textarea>
+                                <input class="btn" type="button" name="btn" value="SEND MESSAGE">
+                                <input type="hidden">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="result">
+                        
+                    </div>
                 </div>
+
+
 
             </div>
         </section>

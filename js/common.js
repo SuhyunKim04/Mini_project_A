@@ -396,12 +396,28 @@ function hideProgress(){
 
 window.addEventListener('scroll', () => {
     const sectionPos = skillSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
-
-    if(screenPos > sectionPos) {
+    const screenPos = window.innerHeight / 2;
+    console.log(screenPos)
+    console.log(sectionPos)
+    if( sectionPos < screenPos ) {
         showProgress();
     }else{
         hideProgress();
     }
 })
  
+const btn = document.querySelector('.btn')
+const sendMessage = () => {
+    const title = document.querySelector('.sub_box')
+    const select = document.querySelector('.select')
+    const msg = document.querySelector('.msg')
+    const result = document.querySelector('.result')
+    localStorage.setItem('title', title.value)
+    localStorage.setItem('select', select.value)
+    localStorage.setItem('message', msg.value)
+    const sendTitle = localStorage.getItem('title')
+    
+    result.innerHTML = `${sendTitle} Thank you. I will contact you.`
+}
+btn.addEventListener('click', sendMessage);
+
