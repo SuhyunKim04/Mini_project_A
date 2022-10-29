@@ -405,8 +405,10 @@ window.addEventListener('scroll', () => {
         hideProgress();
     }
 })
- 
+
+const exchange = () => {
 const btn = document.querySelector('.btn')
+const content = document.querySelector('.content')
 const sendMessage = () => {
     const title = document.querySelector('.sub_box')
     const select = document.querySelector('.select')
@@ -421,6 +423,11 @@ const sendMessage = () => {
     const sendTitle = localStorage.getItem('title')
     const sendSelect = localStorage.getItem('select')
     const sendMessage = localStorage.getItem('message')
+
+    const replace = document.querySelector('.replace')
+    btn.addEventListener('click', (e) => {
+    content.classList.replace('replace')
+    })
     
 
     resultTitle.innerHTML = `제목: ${sendTitle} `
@@ -430,3 +437,6 @@ const sendMessage = () => {
 }
 btn.addEventListener('click', sendMessage);
 
+}
+
+exchange();
