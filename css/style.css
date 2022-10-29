@@ -539,11 +539,13 @@ button {
   margin-bottom: 1em;
 }
 .page_main .contact .inner .content .sub_box {
-  margin-bottom: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 30px;
   padding: 10px;
   width: 100%;
+}
+.page_main .contact .inner .content .select {
+  margin: 10px 0;
 }
 .page_main .contact .inner .content textarea {
   border: 1px solid #d9d9d9;
@@ -562,8 +564,22 @@ button {
   color: #fff;
   align-items: center;
 }
-.page_main .contact .inner .resultBox {
-  background-color: bisque;
+.page_main .contact .inner .outside {
+  border-radius: 10px;
+  background-color: rgb(244, 235, 224);
+}
+.page_main .contact .inner .outside .resultBox {
+  margin: 20px;
+}
+.page_main .contact .inner .outside .resultTitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.page_main .contact .inner .outside .resultSelect {
+  margin-bottom: 30px;
+}
+.page_main .contact .inner .outside .resutlMessage {
+  margin-bottom: 30px;
 }
 
 .page_footer {
