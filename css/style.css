@@ -562,6 +562,9 @@ button {
   color: #fff;
   align-items: center;
 }
+.page_main .contact .inner .resultBox {
+  background-color: bisque;
+}
 
 .page_footer {
   display: flex;

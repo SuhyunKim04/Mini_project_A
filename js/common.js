@@ -412,11 +412,20 @@ const sendMessage = () => {
     const select = document.querySelector('.select')
     const msg = document.querySelector('.msg')
     const result = document.querySelector('.result')
+    const resultTitle = document.querySelector('.resultTitle')
+    const resultSelect = document.querySelector('.resultSelect')
+    const resutlMessage = document.querySelector('.resutlMessage')
     localStorage.setItem('title', title.value)
     localStorage.setItem('select', select.value)
     localStorage.setItem('message', msg.value)
     const sendTitle = localStorage.getItem('title')
+    const sendSelect = localStorage.getItem('select')
+    const sendMessage = localStorage.getItem('message')
     
+
+    resultTitle.innerHTML = `제목: ${sendTitle} `
+    resultSelect.innerHTML = `문의: ${sendSelect}`
+    resutlMessage.innerHTML = `내용: ${sendMessage}`
     result.innerHTML = `${sendTitle} Thank you. I will contact you.`
 }
 btn.addEventListener('click', sendMessage);
