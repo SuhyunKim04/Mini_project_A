@@ -10,9 +10,12 @@
     }
 
         .content{
+            .create{
                 .replace{
-                    display: block;
+                    display: none;
                 }
+            }
+            
                 .sub_box{
                     border: 1px solid #d9d9d9;
                     border-radius: 30px;
@@ -51,23 +54,13 @@
 
             .outside {
                 border-radius: 10px;
-                background-color: rgb(244, 235, 224);
+                background-color: rgb(239, 237, 234);
                 
                 .resultBox{
-                    margin: 20px;
+                    @include flex;
+                    flex-direction: column;
                 }
-                .resultTitle{
-                    margin-top: 10px;
-                    margin-bottom: 30px;
-                }
-
-                .resultSelect {
-                    margin-bottom: 30px;
-                }
-
-                .resutlMessage{
-                    margin-bottom: 30px;
-                }
+            
             }
             // display: flex;
             // flex-direction: column;

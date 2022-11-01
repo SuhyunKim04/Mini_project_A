@@ -408,7 +408,7 @@ window.addEventListener('scroll', () => {
 
 const exchange = () => {
 const btn = document.querySelector('.btn')
-const content = document.querySelector('.content')
+const create = document.querySelector('.create')
 const sendMessage = () => {
     const title = document.querySelector('.sub_box')
     const select = document.querySelector('.select')
@@ -416,7 +416,8 @@ const sendMessage = () => {
     const result = document.querySelector('.result')
     const resultTitle = document.querySelector('.resultTitle')
     const resultSelect = document.querySelector('.resultSelect')
-    const resutlMessage = document.querySelector('.resutlMessage')
+    const resultMessage = document.querySelector('.resultMessage')
+    // const resultBox = document.querySelector('.resultBox')
     localStorage.setItem('title', title.value)
     localStorage.setItem('select', select.value)
     localStorage.setItem('message', msg.value)
@@ -424,15 +425,15 @@ const sendMessage = () => {
     const sendSelect = localStorage.getItem('select')
     const sendMessage = localStorage.getItem('message')
 
-    const replace = document.querySelector('.replace')
-    btn.addEventListener('click', (e) => {
-    content.classList.replace('replace')
-    })
+    // const replace = document.querySelector('.replace')
+    // btn.addEventListener('click', (e) => {
+    // content.classList.add('.replace')
+    // })
     
 
     resultTitle.innerHTML = `제목: ${sendTitle} `
     resultSelect.innerHTML = `문의: ${sendSelect}`
-    resutlMessage.innerHTML = `내용: ${sendMessage}`
+    resultMessage.innerHTML = `내용: ${sendMessage}`
     result.innerHTML = `${sendTitle} Thank you. I will contact you.`
 }
 btn.addEventListener('click', sendMessage);
