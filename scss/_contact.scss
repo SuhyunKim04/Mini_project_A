@@ -59,6 +59,10 @@
                 .resultBox{
                     @include flex;
                     flex-direction: column;
+
+                    .resultSelect{
+                        margin-top: 10px;
+                    }
                 }
             
             }

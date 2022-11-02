@@ -576,6 +576,9 @@ button {
   justify-content: space-between;
   flex-direction: column;
 }
+.page_main .contact .inner .outside .resultBox .resultSelect {
+  margin-top: 10px;
+}
 
 .page_footer {
   display: flex;
