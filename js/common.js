@@ -424,6 +424,15 @@ const sendMessage = () => {
     const sendTitle = localStorage.getItem('title')
     const sendSelect = localStorage.getItem('select')
     const sendMessage = localStorage.getItem('message')
+    const form = document.getElementById('form')
+
+    form.addEventListener('submit', (e) => {
+        
+        if(title.value === '' || title.value == null) {
+            e.preventDefault();
+        }
+        
+    })
 
     // const replace = document.querySelector('.replace')
     // btn.addEventListener('click', (e) => {
