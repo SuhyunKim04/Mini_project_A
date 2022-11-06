@@ -6,6 +6,7 @@
     <meta name="VIEWport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Mini_Project</title>
+    
   </head>
   <body>
     <header class="page_header">
@@ -260,11 +261,12 @@
               
 
                 <div class="content">
-                    <div class="create replace">
-                        <form id="form" action="/" method="GET">
+                    <div class="create">
+                        <form id="form" action="" method="POST">
                             <div>
                                 <label for="name" class="blind">Title</label>
-                                <input class="sub_box"type="text" name="subject" placeholder="제목입력">
+                                <input class="sub_box" type="text" name="subject"  required placeholder="제목입력">
+                                <strong class="warn">The title is equired !!</strong>
                                 <select class="select">
                                     <option>채용문의</option>
                                     <option>프로젝트 문의</option>
@@ -272,18 +274,16 @@
                                 </select>
                                 <textarea  class="msg" type="text" name="content" placeholder="내용입력"></textarea>
                                 <input class="btn" type="button" name="btn" value="SEND MESSAGE">
-                                <input type="hidden">
+                                
                             </div>
                         </form>
                     </div>
 
-                    <div class="outside">
-                        <ul class="resultBox">
-                            <li class="resultTitle"></li>
-                            <li class="resultSelect"></li>
-                            <li class="resultMessage"></li>
-                            <li class="result"></li>
-                        </ul>
+                    <div class="result">
+                        <h3 class="title"></h3>
+                        <strong class="type"></strong>
+                        <p class="memo"></p>
+                        <p class="says"></p> 
                     </div>
                     
                 </div>
@@ -321,6 +321,6 @@
     anim = lottie.loadAnimation(params);
 
 </script>
-    <script src="./js/common.js"></script>
+    <script src="./js/common_edit.js"></script>
   </body>
 </html>

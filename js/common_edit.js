@@ -406,53 +406,68 @@ window.addEventListener('scroll', () => {
     }
 })
 
-const exchange = () => {
-// const btn = document.querySelector('.btn')
-// const create = document.querySelector('.create')
-const sendMessage = () => {
-    const title = document.querySelector('.sub_box')
-    const select = document.querySelector('.select')
-    const msg = document.querySelector('.msg')
-    const result = document.querySelector('.result')
-    const resultTitle = document.querySelector('.resultTitle')
-    const resultSelect = document.querySelector('.resultSelect')
-    const resultMessage = document.querySelector('.resultMessage')
-    // const resultBox = document.querySelector('.resultBox')
-    localStorage.setItem('title', title.value)
-    localStorage.setItem('select', select.value)
-    localStorage.setItem('message', msg.value)
-    const sendTitle = localStorage.getItem('title')
-    const sendSelect = localStorage.getItem('select')
-    const sendMessage = localStorage.getItem('message')
-    const form = document.getElementById('form')
-    const warn = document.querySelector('.warn')
-    form.addEventListener('submit', (e) => {
-        console.log('h')
-        if( title.value === '') {
-            warn.classList.add('on')
-        }  else {
-            warn.classList.remove('on')
+const contactMe = () => {
+
+    const sendBtn = document.querySelector('#form .btn')
+    const sendMessage = () => {
+        const contact = document.querySelector('.contact') 
+        const warn = document.querySelector('.warn')
+        if( !contact) {
+            return false;
         }
         
-        // if(title.value === '' || title.value == null) {
-        //     e.preventDefault();
-        // }else
-        
-    })
-
-    // const replace = document.querySelector('.replace')
-    // btn.addEventListener('click', (e) => {
-    // content.classList.add('.replace')
-    // })
+        const title = contact.querySelector('.sub_box')
+        const select = contact.querySelector('.select')
+        const msg = contact.querySelector('.msg')
+        const create = contact.querySelector('.create')
+        const result = contact.querySelector('.result')
+        const resultTitle = result.querySelector('.title')
+        const resultSelect = result.querySelector('.type')
+        const resultMsg = result.querySelector('.memo')
+        const says = result.querySelector('.says')
     
+        const setMessage = () => {
+            localStorage.setItem('title', title.value)
+            localStorage.setItem('select', select.value)
+            localStorage.setItem('message', msg.value)
+        }
+    
+    
+        const getMessage = () => {
+            const sendTitle = localStorage.getItem('title')
+            const sendSelect = localStorage.getItem('select')
+            const sendMessage = localStorage.getItem('message') 
+        
+            resultTitle.innerHTML = `제목: ${sendTitle} `
+            resultSelect.innerHTML = `문의: ${sendSelect}`
+            resultMsg.innerHTML = `내용: ${sendMessage}`
+            says.innerHTML = `${sendTitle} Thank you. I will contact you.`
+        }
+    
+        const checkForm = () => {
+            if( title.value === '') {
+                warn.classList.add('on');
+                title.style.border = '1px solid red'; 
+            }  else {
+                warn.classList.remove('on'); 
+                showResult();
+            } 
+        }
+    
+        const showResult = () => {
+            create.classList.add('off');
+            result.classList.add('on');
+        }
+        setMessage();
+        getMessage();
+        checkForm();
+    }
 
-    resultTitle.innerHTML = `제목: ${sendTitle} `
-    resultSelect.innerHTML = `문의: ${sendSelect}`
-    resultMessage.innerHTML = `내용: ${sendMessage}`
-    result.innerHTML = `${sendTitle} Thank you. I will contact you.`
+    sendBtn.addEventListener('click', sendMessage)
 }
-btn.addEventListener('click', sendMessage);
+ 
 
-}
+contactMe();
+ 
 
-exchange();
+ 

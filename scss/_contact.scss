@@ -1,3 +1,4 @@
+ 
 .page_main .contact{
   
 
@@ -9,18 +10,43 @@
 
     }
 
+    .create {
+        &.off {
+            display:none;
+        }
+    }
+
         .content{
+
             
+                .warn {
+                    color:red;
+                    font-size:12px;
+                    display:none;
+
+                    &.on {
+                        display:block;
+                    }
+                }
                 .sub_box{
                     border: 1px solid #d9d9d9;
                     border-radius: 30px;
                     padding: 10px;
                     width : 100%;
+
+                   
                     
                     
                 }
                 .select {
                     margin: 10px 0;
+                }
+
+                .sub_box, textarea {
+                    &:focus {
+                        background-color:#f2f2f2;
+                        outline:1px solid #333;
+                    }
                 }
 
                 textarea{
@@ -47,19 +73,39 @@
                 }
             }
 
-            .outside {
+            .result {
                 border-radius: 10px;
                 background-color: rgb(239, 237, 234);
+                padding:20px;
+                display: none;
                 
-                .resultBox{
-                    @include flex;
-                    flex-direction: column;
-
-                    .resultSelect{
-                        margin-top: 10px;
-                    }
+                &.on {
+                    display: block;
                 }
-            
+
+                & > * {
+                    margin-bottom:10px;
+                }
+                
+                h3 {
+                    font-size:20px;
+                }
+                strong {
+                    display:block;
+                    color:dodgerblue;
+                }
+
+                p.memo {
+                    background-color:#f3f3f3;
+                    border-radius:8px;
+                    padding:10px;
+                    line-height:1.4;
+                    color:#999;
+                }
+
+                p.msg {
+                    font-weight:bodl;
+                }
             }
             // display: flex;
             // flex-direction: column;
