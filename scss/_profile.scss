@@ -73,3 +73,14 @@
 
     }
 }
+
+@include desktop{
+    .page_main .profile{
+        
+        .inner{
+            max-width: none;
+            width: auto;
+            margin: 0 20px;
+        }
+    }
+}
