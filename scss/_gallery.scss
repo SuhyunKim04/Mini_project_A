@@ -175,3 +175,56 @@
 
 
 }
+
+@include tablet {
+  .page_main .gallery{
+
+    // .inside{
+    //   max-width: none;
+    //   width: auto;
+    //   margin: 0 20px;
+    // }
+    .list {
+      grid-template-columns: repeat(3, 1fr);
+ 
+    }
+
+    .view_detail{ 
+      width: 100%;
+      transform: translateX(-700px);
+      
+
+      .contents{
+
+        .close {
+          width: 40px;
+          height: 40px;
+          left: 90%;
+          top: 2em;
+          opacity: 0;
+          transform:translateX(20px);
+          transition:all 0.4s 0.8s;
+    
+          &::before, &::after{
+            left: 19px;bottom: 8px;
+            height: 25px;
+          }
+  
+        }
+      }
+
+    }
+
+    
+  }
+}
+
+@include mobile {
+
+  .page_main .gallery{
+
+    .list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

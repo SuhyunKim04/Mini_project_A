@@ -1,6 +1,6 @@
  
 .page_main .contact{
-  
+    background-color: #fdfcef;
 
     .inner{
 
@@ -110,5 +110,33 @@
             // display: flex;
             // flex-direction: column;
         
+    }
+}
+
+@include tablet{
+    .page_main .contact{
+
+        .inner{
+
+            .content{
+
+            
+                .warn {
+                    font-size:1.5em;
+                }
+                .sub_box{
+                    border-radius: 40px;
+                    height: 30px;
+                }
+                .select {
+                    margin: 1.5em 0;
+                    
+                }
+
+                .btn{
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }

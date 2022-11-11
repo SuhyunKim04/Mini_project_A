@@ -80,3 +80,24 @@
 
     }
 }
+
+@include desktop{
+    .page_main .skills{
+        .inner{
+            max-width: none;
+            margin: 0 20px;
+        }
+    }
+}
+
+@include tablet {
+    .page_main .skills {
+        .inner{
+            
+            h2{
+                font-size: 2em;
+            }
+        }
+        
+    }
+}
