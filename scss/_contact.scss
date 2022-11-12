@@ -113,7 +113,7 @@
     }
 }
 
-@include tablet{
+@include media($tablet){
     .page_main .contact{
 
         .inner{

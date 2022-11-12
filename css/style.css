@@ -130,22 +130,6 @@ button {
   opacity: 1;
 }
 
-@media (min-width: 640px) and (max-width: 1399px) {
-  .logo img {
-    margin-top: 20px;
-    height: 50px;
-    max-height: 100%;
-  }
-  .gnb ul {
-    display: flex;
-    justify-content: space-around;
-    width: 400px;
-  }
-  .gnb ul li {
-    font-weight: 500;
-    font-size: 18px;
-  }
-}
 .btnScroll {
   position: fixed;
   right: 50px;
@@ -284,7 +268,7 @@ button {
   width: calc((100% - 30px) / 4);
 }
 
-@media (max-width: 1400px) {
+@media all and (max-width: 1200px) {
   .page_main .profile .inner {
     max-width: none;
     width: auto;
@@ -294,7 +278,7 @@ button {
     display: none;
   }
 }
-@media (min-width: 640px) and (max-width: 1399px) {
+@media all and (max-width: 640px) {
   .page_main .profile .innerTablet {
     display: flex;
     justify-content: space-between;
@@ -334,6 +318,11 @@ button {
   }
   .page_main .profile .inner {
     display: none;
+  }
+}
+@media all and (max-width: 480px) {
+  .page_main .profile .inner .big {
+    display: block;
   }
 }
 .page_main .gallery {
@@ -434,12 +423,13 @@ button {
 .page_main .gallery .view_detail {
   position: fixed;
   background-color: #222;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   color: #fff;
   left: 0;
   top: 0;
   transition: 0.8s;
-  transform: translateX(-500px);
+  transform: translateX(-100%);
   z-index: 1001;
 }
 .page_main .gallery .view_detail.open {
@@ -519,18 +509,17 @@ button {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 1400px) {
+@media all and (max-width: 1200px) {
   .page_main .gallery .list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 640px) and (max-width: 1399px) {
+@media all and (max-width: 640px) {
   .page_main .gallery .list {
     grid-template-columns: repeat(3, 1fr);
   }
   .page_main .gallery .view_detail {
-    width: 100%;
-    transform: translateX(-700px);
+    max-width: none;
   }
   .page_main .gallery .view_detail .contents .close {
     width: 40px;
@@ -545,6 +534,11 @@ button {
     left: 19px;
     bottom: 8px;
     height: 25px;
+  }
+}
+@media all and (max-width: 480px) {
+  .page_main .gallery .list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .page_main .skills {
@@ -614,6 +608,7 @@ button {
 }
 .page_main .skills .inner .skills_list li span {
   flex-basis: 120px;
+  outline: 1px solid red;
 }
 .page_main .skills .inner .pro {
   appearance: none;
@@ -629,13 +624,13 @@ button {
   transition-duration: 0.4s;
 }
 
-@media (max-width: 1400px) {
+@media all and (max-width: 1200px) {
   .page_main .skills .inner {
     max-width: none;
     margin: 0 20px;
   }
 }
-@media (min-width: 640px) and (max-width: 1399px) {
+@media all and (max-width: 640px) {
   .page_main .skills .inner h2 {
     font-size: 2em;
   }
@@ -718,7 +713,7 @@ button {
   font-weight: bodl;
 }
 
-@media (min-width: 640px) and (max-width: 1399px) {
+@media all and (max-width: 640px) {
   .page_main .contact .inner .content .warn {
     font-size: 1.5em;
   }

@@ -56,12 +56,13 @@
     .view_detail{ 
       position: fixed;
       background-color: #222;
-      width: 500px;
+      width: 100%;
+      max-width:500px;
       color: #fff;
       left: 0;
       top:0;
       transition:0.8s;
-      transform: translateX(-500px);
+      transform: translateX(-100%);
       z-index:1001;
 
       &.open {
@@ -160,7 +161,7 @@
     }
   }
 
-@include desktop{
+@include media($pc){
   .page_main .gallery{
 
     // .inside{
@@ -175,8 +176,8 @@
 
 
 }
-
-@include tablet {
+ 
+@include media($tablet) {
   .page_main .gallery{
 
     // .inside{
@@ -190,8 +191,7 @@
     }
 
     .view_detail{ 
-      width: 100%;
-      transform: translateX(-700px);
+     max-width:none;
       
 
       .contents{
@@ -219,7 +219,7 @@
   }
 }
 
-@include mobile {
+@include media($mobile) {
 
   .page_main .gallery{
 

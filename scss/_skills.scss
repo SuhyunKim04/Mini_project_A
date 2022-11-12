@@ -53,6 +53,7 @@
 
                span{
                 flex-basis:120px;
+                outline: 1px solid red;
                }
             }
             
@@ -81,7 +82,7 @@
     }
 }
 
-@include desktop{
+@include media($pc){
     .page_main .skills{
         .inner{
             max-width: none;
@@ -90,7 +91,7 @@
     }
 }
 
-@include tablet {
+@include media($tablet) {
     .page_main .skills {
         .inner{
             

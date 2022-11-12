@@ -1,0 +1,69 @@
+@function unitCheck($x) {
+    // 단위체크
+    @if (type-of($x) == number) {
+      @if (unitless($x)) {
+        @if ($x == 0) {
+          @return $x;
+        } @else if ($x == null) {
+          @return null;
+        } @else {
+          @return $x + px;
+        }
+      }
+    }
+  
+    @return $x;
+}
+
+@mixin box ($c, $w, $h:null, $r:null) {
+    background-color: $c; 
+    $w : unitCheck($w);
+    $h : unitCheck($h);
+    $r : unitCheck($r);
+    width: $w;
+    border-radius: $r;
+    @if ($h == null) {
+        height : $w;
+    } @else {
+        height: $h;
+    }
+}
+
+.gray {
+    @include box(gray, 100,48, 4);
+}
+
+.fill {
+    @include box(blue, 100);
+}
+
+.txt_1 {
+    @include font(30);
+}
+
+.txt_2 {
+    @include font(20,1.2,600);
+}
+
+.txt_3 {
+    @include font(14, $wt:600);
+}
+
+.txt_4 {
+    @include font(1.2em);
+}
+
+.box_1 {
+    @include border(#333)
+}
+
+.box_2 {
+    @include border(red, bottom);
+}
+
+.icon_1 {
+    @include icon('./images/icon.png', 20, 20)
+}
+
+
+

@@ -1,3 +1,20 @@
+@function unitCheck($x) {
+  // 단위체크
+  @if (type-of($x) == number) {
+    @if (unitless($x)) {
+      @if ($x == 0) {
+        @return $x;
+      } @else if ($x == null) {
+        @return null;
+      } @else {
+        @return $x + px;
+      }
+    }
+  }
+
+  @return $x;
+}
+
 @mixin line($color: red) {
   outline: 1px solid $color;
 }
@@ -15,22 +32,29 @@
     top:0;bottom:$b;
 }
 
-@mixin desktop{
-  @media (max-width: 1400px){
+// @mixin desktop{
+//   @media (max-width: 1400px){
+//     @content;
+//   }
+// }
+
+// @mixin tablet{
+//   @media (max-width: 640px){
+//     @content;
+//   }
+// }
+
+// @mixin mobile{
+//   @media  (max-width: 480px){
+//     @content;
+//   }
+// }
+@mixin media($width) {
+  $width: unitCheck($width);
+  @media all and (max-width: $width) {
     @content;
   }
 }
 
-@mixin tablet{
-  @media (min-width: 640px) and (max-width: 1399px){
-    @content;
-  }
-}
-
-@mixin mobile{
-  @media (min-width: 480px) and (max-width: 639px){
-    @content;
-  }
-}
-
+ 
 

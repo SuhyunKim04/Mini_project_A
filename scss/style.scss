@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 $url : '../images/';
-
+$pc : 1200;
+// $tablet : 768;
+$tablet : 640;
+$mobile : 480;
+// $ios :375;
 
 body{ 
     color: #2f2f2f;
