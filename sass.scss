@@ -37,33 +37,37 @@
     @include box(blue, 100);
 }
 
-.txt_1 {
-    @include font(30);
+@mixin font ($f, $l){
+    font-size: $f;
+    line-height: $l;
 }
+// .txt_1 {
+//     @include font(30);
+// }
 
-.txt_2 {
-    @include font(20,1.2,600);
-}
+// .txt_2 {
+//     @include font(20,1.2,600);
+// }
 
-.txt_3 {
-    @include font(14, $wt:600);
-}
+// .txt_3 {
+//     @include font(14, $wt:600);
+// }
 
-.txt_4 {
-    @include font(1.2em);
-}
+// .txt_4 {
+//     @include font(1.2em);
+// }
 
-.box_1 {
-    @include border(#333)
-}
+// .box_1 {
+//     @include border(#333)
+// }
 
-.box_2 {
-    @include border(red, bottom);
-}
+// .box_2 {
+//     @include border(red, bottom);
+// }
 
-.icon_1 {
-    @include icon('./images/icon.png', 20, 20)
-}
+// .icon_1 {
+//     @include icon('./images/icon.png', 20, 20)
+// }
 
 
 
