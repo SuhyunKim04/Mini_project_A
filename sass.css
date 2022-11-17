@@ -1,17 +1,100 @@
-/* Error: Undefined mixin.
- *    ,
- * 41 |     @include font(30);
- *    |     ^^^^^^^^^^^^^^^^^
- *    '
- *   sass.scss 41:5  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 41 \2502      @include font(30);\a    \2502      ^^^^^^^^^^^^^^^^^\a    \2575 \a   sass.scss 41:5  root stylesheet";
+li:after {
+  margin-left: 10px;
+  color: red;
 }
+
+.each-a:after {
+  content: "a";
+}
+
+.each-b:after {
+  content: "b";
+}
+
+.each-c:after {
+  content: "c";
+}
+
+.each-d:after {
+  content: "d";
+}
+
+.each-e:after {
+  content: "e";
+}
+
+.for-1 {
+  color: red;
+}
+
+.for-2 {
+  color: blue;
+}
+
+.for-3 {
+  color: green;
+}
+
+.for-4 {
+  color: gold;
+}
+
+.for-5 {
+  color: tomato;
+}
+
+/*
+
+@for $i from 1 trough 5 {   }
+li.for-1 { color:red;}
+li.for-2 { color:blue;}
+*/
+.variables li:nth-child(1) {
+  background-color: blue;
+}
+
+.variables li:nth-child(2) {
+  background-color: yellow;
+}
+
+.variables li:nth-child(3) {
+  background-color: skyblue;
+}
+
+.variables li:nth-child(4) {
+  background-color: #ffd5d5;
+}
+
+.gray {
+  background-color: gray;
+  width: 100px;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.fill {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.txt_1 {
+  font-size: 30px;
+}
+
+.txt_2 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.txt_3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.txt_4 {
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=sass.css.map */

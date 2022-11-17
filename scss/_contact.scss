@@ -32,11 +32,7 @@
                     border: 1px solid #d9d9d9;
                     border-radius: 30px;
                     padding: 10px;
-                    width : 100%;
-
-                   
-                    
-                    
+                    width : 100%; 
                 }
                 .select {
                     margin: 10px 0;
@@ -119,23 +115,27 @@
         .inner{
 
             .content{
-
-            
                 .warn {
-                    font-size:1.5em;
+                    color:red;
+                    font-size:10px;
+                    display:none;
+
+                    &.on {
+                        display:block;
+                    }
                 }
                 .sub_box{
-                    border-radius: 40px;
-                    height: 30px;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 30px;
+                    padding: 10px;
+                    width : 80%; 
+                    margin-left: 2em;
                 }
                 .select {
-                    margin: 1.5em 0;
-                    
+                    margin: 10px 0 10px 32px;
                 }
-
-                .btn{
-                    font-weight: 500;
-                }
+            
+                
             }
         }
     }

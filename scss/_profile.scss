@@ -76,86 +76,64 @@
 
 @include media($pc){
     .page_main .profile{
-        
+
         .inner{
-            max-width: none;
-            width: auto;
             margin: 0 20px;
         }
-        .innerTablet{
-
-           display: none;
-        }
-
-       
     }
 }
 
 @include media($tablet){
     .page_main .profile{
 
-        .innerTablet{
-            @include flex; 
-            max-width: none;
-            width: auto;
-            margin: 0 10px;
-            box-sizing:border-box;  
+        .inner{
+            .big{
+                display: none;
+            }
 
-            .infoTablet{
-                article{
-                    h2{
-                        font-size: 3em;
-                        margin-bottom: 2em;
-                    }
-                    .thumbsTablet{
-                        margin-bottom: 1em;
-                    }
+           .tablet{
+            display: flex;
+            flex-direction: column-reverse;
+           }
 
-                    p{
-                        font-size: 1.5em;
-                        margin-bottom: 2em;
-                        margin-left: 30%;
-                    }
+            .profileDetail{
+                padding-bottom: 20px;
+            }
 
-                    .list{
-                        display: flex;
-                        flex-wrap: wrap;  
-                        line-height:1.5;
-                        margin-left: 30%;
+           .info{
+            figure{
 
-                        &.social {
-                            margin-top:1em;
-                        }
+                .thumbs{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 10px;
+                    cursor: none;
 
-                        dt {
-                            width:100px; 
-                            font-size: 1.25em;
-                            
-                        } 
-            
-                        dd {
-                        
-                            width:calc(100% - 100px);
-                            font-size: 1.25em;
-                        }
+                    img{
+                        width: 100%;
+                        max-width: 200px;
                     }
                 }
             }
+           }
         }
-
-        .inner{
-            display: none;
-        }
+        
     }
 }
 
 @include media($mobile) {
     .page_main .profile{
 
-        .inner{
-            .big{
-                display: block;
+        .info{
+
+            .profileName{
+                h2{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
             }
+
         }
-    }
+    
+}
 }

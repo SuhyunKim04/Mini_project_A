@@ -270,59 +270,35 @@ button {
 
 @media all and (max-width: 1200px) {
   .page_main .profile .inner {
-    max-width: none;
-    width: auto;
     margin: 0 20px;
-  }
-  .page_main .profile .innerTablet {
-    display: none;
   }
 }
 @media all and (max-width: 640px) {
-  .page_main .profile .innerTablet {
-    display: flex;
-    justify-content: space-between;
-    max-width: none;
-    width: auto;
-    margin: 0 10px;
-    box-sizing: border-box;
-  }
-  .page_main .profile .innerTablet .infoTablet article h2 {
-    font-size: 3em;
-    margin-bottom: 2em;
-  }
-  .page_main .profile .innerTablet .infoTablet article .thumbsTablet {
-    margin-bottom: 1em;
-  }
-  .page_main .profile .innerTablet .infoTablet article p {
-    font-size: 1.5em;
-    margin-bottom: 2em;
-    margin-left: 30%;
-  }
-  .page_main .profile .innerTablet .infoTablet article .list {
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 1.5;
-    margin-left: 30%;
-  }
-  .page_main .profile .innerTablet .infoTablet article .list.social {
-    margin-top: 1em;
-  }
-  .page_main .profile .innerTablet .infoTablet article .list dt {
-    width: 100px;
-    font-size: 1.25em;
-  }
-  .page_main .profile .innerTablet .infoTablet article .list dd {
-    width: calc(100% - 100px);
-    font-size: 1.25em;
-  }
-  .page_main .profile .inner {
+  .page_main .profile .inner .big {
     display: none;
+  }
+  .page_main .profile .inner .tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .page_main .profile .inner .profileDetail {
+    padding-bottom: 20px;
+  }
+  .page_main .profile .inner .info figure .thumbs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    cursor: none;
+  }
+  .page_main .profile .inner .info figure .thumbs img {
+    width: 100%;
+    max-width: 200px;
   }
 }
 @media all and (max-width: 480px) {
-  .page_main .profile .inner .big {
-    display: block;
+  .page_main .profile .info .profileName h2 {
+    font-size: 20px;
+    font-weight: 500;
   }
 }
 .page_main .gallery {
@@ -431,6 +407,7 @@ button {
   transition: 0.8s;
   transform: translateX(-100%);
   z-index: 1001;
+  box-sizing: border-box;
 }
 .page_main .gallery .view_detail.open {
   transform: translateX(0);
@@ -521,24 +498,46 @@ button {
   .page_main .gallery .view_detail {
     max-width: none;
   }
-  .page_main .gallery .view_detail .contents .close {
-    width: 40px;
-    height: 40px;
-    left: 90%;
-    top: 2em;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.4s 0.8s;
+  .page_main .gallery .view_detail .contents .contents_detail {
+    padding-bottom: 90px;
   }
-  .page_main .gallery .view_detail .contents .close::before, .page_main .gallery .view_detail .contents .close::after {
-    left: 19px;
-    bottom: 8px;
-    height: 25px;
+  .page_main .gallery .view_detail .contents .close {
+    display: none;
+  }
+  .page_main .gallery .view_detail .contents .closeBottom {
+    width: 300px;
+    height: 50px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 @media all and (max-width: 480px) {
   .page_main .gallery .list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page_main .gallery .view_detail {
+    max-width: none;
+  }
+  .page_main .gallery .view_detail .contents .close {
+    display: none;
+  }
+  .page_main .gallery .view_detail .contents .closeBottom {
+    width: 200px;
+    height: 50px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 .page_main .skills {
@@ -715,17 +714,22 @@ button {
 
 @media all and (max-width: 640px) {
   .page_main .contact .inner .content .warn {
-    font-size: 1.5em;
+    color: red;
+    font-size: 10px;
+    display: none;
+  }
+  .page_main .contact .inner .content .warn.on {
+    display: block;
   }
   .page_main .contact .inner .content .sub_box {
-    border-radius: 40px;
-    height: 30px;
+    border: 1px solid #d9d9d9;
+    border-radius: 30px;
+    padding: 10px;
+    width: 80%;
+    margin-left: 2em;
   }
   .page_main .contact .inner .content .select {
-    margin: 1.5em 0;
-  }
-  .page_main .contact .inner .content .btn {
-    font-weight: 500;
+    margin: 10px 0 10px 32px;
   }
 }
 .page_footer {

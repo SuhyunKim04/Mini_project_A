@@ -313,6 +313,11 @@ const viewDetail = () => {
         view.classList.remove('open')
         dimm.style.display = 'none'
     })
+    const closeBottom = document.querySelector('.closeBottom')
+    closeBottom.addEventListener('click', (e) => {
+        view.classList.remove('open')
+        dimm.style.display = 'none'
+    })
 }
 
 
