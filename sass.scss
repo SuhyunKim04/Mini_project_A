@@ -1,125 +1,490 @@
-$arrays : a,b,c,d,e;
-li:after { margin-left:10px; color:red;}
-
-@each $array in $arrays {
-  .each-#{$array}:after{
-    content: "#{$array}"
-  }
-}
- 
-$colors : red,blue,green,gold,tomato;
-@for $i from 1 through 5 {
-   .for-#{$i} {
-    color: nth($colors, $i);
-  }
-}
-
-
-/*
-
-@for $i from 1 trough 5 {   }
-li.for-1 { color:red;}
-li.for-2 { color:blue;}
-*/
-
-$main : blue;
-$second : yellow;
-$url : '../images/icons/';
-$count : 10;
-
-$gray : (
-  light : #f3f3f3,
-  medium : #d7d7d7,
-  dark : #333,
-);
-$red : (
-  light : #ffd5d5,
-  medium : #b44d4d,
-  dark : rgb(190, 3, 3),
-);
- 
-
-$blue : skyblue, dodgerblue, navy;
-
-.variables li:nth-child(1) {background-color:$main;}
-.variables li:nth-child(2) {background-color:$second;}
-
-
-.variables li:nth-child(3) {background-color:nth($blue, 1)}
-.variables li:nth-child(4) {background-color:map-get($red, light)}
-
-
-@function unitCheck($x) {
-    // 단위체크
-    @if (type-of($x) == number) {
-      @if (unitless($x)) {
-        @if ($x == 0) {
-          @return $x;
-        } @else if ($x == null) {
-          @return null;
-        } @else {
-          @return $x + px;
-        }
-      }
-    }
-  
-    @return $x;
+@charset "UTF-8";
+/* Error: Undefined variable.
+ *    ,
+ * 49 | .variables li:nth-child(4) {background-color:map-get($red, light)}
+ *    |                                                      ^^^^
+ *    '
+ *   sass.scss 49:54  root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    ╷\a 49 │ .variables li:nth-child(4) {background-color:map-get($red, light)}\a    │                                                      ^^^^\a    ╵\a   sass.scss 49:54  root stylesheet";
 }
 
-@mixin box ($c, $w, $h:null, $r:null) {
-    background-color: $c; 
-    $w : unitCheck($w);
-    $h : unitCheck($h);
-    $r : unitCheck($r);
-    width: $w;
-    border-radius: $r;
-    @if ($h == null) {
-        height : $w;
-    } @else {
-        height: $h;
-    }
-}
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
+/*# sourceMappingURL=sass.scss.map */
 
-.gray {
-    @include box(gray, 100,48, 4);
-}
-
-.fill {
-    @include box(blue, 100);
-}
-
-@mixin font ($f, $l:null, $wt:null){
-    font-size: unitCheck($f);
-    line-height: $l;
-    font-weight: $wt;
-}
-.txt_1 {
-    @include font(30);
-}
-
-.txt_2 {
-    @include font(20,1.2,600);
-}
-
-.txt_3 {
-    @include font(14, $wt:600);
-}
-
-.txt_4 {
-    @include font(1.2em);
-}
-
-// .box_1 {
-//     @include border(#333)
-// }
-
-// .box_2 {
-//     @include border(red, bottom);
-// }
-
-// .icon_1 {
-//     @include icon('./images/icon.png', 20, 20)
-// }
-
-
-
+/*# sourceMappingURL=sass.scss.map */
