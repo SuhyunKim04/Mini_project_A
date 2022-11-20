@@ -1,3 +1,20 @@
+@charset "UTF-8";
+/* Error: Undefined variable.
+ *    ,
+ * 49 | .variables li:nth-child(4) {background-color:map-get($red, light)}
+ *    |                                                      ^^^^
+ *    '
+ *   sass.scss 49:54  root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    ╷\a 49 │ .variables li:nth-child(4) {background-color:map-get($red, light)}\a    │                                                      ^^^^\a    ╵\a   sass.scss 49:54  root stylesheet";
+}
+
 li:after {
   margin-left: 10px;
   color: red;
@@ -44,7 +61,6 @@ li:after {
 }
 
 /*
-
 @for $i from 1 trough 5 {   }
 li.for-1 { color:red;}
 li.for-2 { color:blue;}
