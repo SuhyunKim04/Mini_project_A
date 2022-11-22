@@ -634,9 +634,6 @@ button {
     font-size: 2em;
   }
 }
-.page_main .contact {
-  background-color: #fdfcef;
-}
 .page_main .contact .inner h2 {
   font-size: 3em;
   margin-bottom: 1em;
@@ -713,6 +710,9 @@ button {
 }
 
 @media all and (max-width: 640px) {
+  .page_main .contact {
+    margin: 0 20px;
+  }
   .page_main .contact .inner .content .warn {
     color: red;
     font-size: 10px;
@@ -722,14 +722,10 @@ button {
     display: block;
   }
   .page_main .contact .inner .content .sub_box {
-    border: 1px solid #d9d9d9;
-    border-radius: 30px;
-    padding: 10px;
-    width: 80%;
-    margin-left: 2em;
+    box-sizing: border-box;
   }
-  .page_main .contact .inner .content .select {
-    margin: 10px 0 10px 32px;
+  .page_main .contact .inner .content .msg {
+    box-sizing: border-box;
   }
 }
 .page_footer {
