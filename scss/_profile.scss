@@ -91,16 +91,30 @@
                 display: none;
             }
 
-           .tablet{
-            display: flex;
-            flex-direction: column-reverse;
-           }
+           .info{
 
-            .profileDetail{
-                padding-bottom: 20px;
+            .profileName {
+                margin-bottom: 10px;
             }
 
-           .info{
+            .tablet{
+                display: flex;
+                flex-direction: column-reverse;
+
+                .profileDetail{
+                    margin-top: 20px;
+
+                    p{
+                        margin-bottom: 20px;
+                        font-size: 1.5em;
+                    }
+                }
+
+                .list{
+                    font-size: 1.5em;
+                }
+               }
+
             figure{
 
                 .thumbs{
@@ -128,7 +142,7 @@
 
             .profileName{
                 h2{
-                    font-size: 20px;
+                    font-size: 30px;
                     font-weight: 500;
                 }
             }
