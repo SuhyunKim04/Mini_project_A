@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   color: #2f2f2f;
   font-family: "Roboto", sans-serif;
@@ -148,21 +157,22 @@ button {
     width: 100%;
     max-width: 300px;
     height: 100vh;
-    right: 0;
+    right: -310px;
     top: 0;
-    transform: translateX(100%);
-    transition: 0.5s;
+    transition: right 0.5s;
   }
   .page_header .white.open {
-    transform: translateX(0);
+    right: 0;
+  }
+  .page_header .gnb {
+    padding: 100px 0 0 70px;
   }
   .page_header .gnb ul {
     font-size: 20px;
     display: block;
-    position: absolute;
-    line-height: 50px;
-    right: -150px;
-    top: 60px;
+  }
+  .page_header .gnb ul li {
+    margin: 20px 0;
   }
   .page_header .btnHam .menu {
     position: relative;
@@ -220,11 +230,17 @@ button {
 
 .page_main .area {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media all and (max-width: 640px) {
+  .page_main .profile {
+    height: auto;
+  }
+}
 .page_main .skills .inner, .page_main .profile .inner {
   width: 100%;
   box-sizing: border-box;
@@ -341,10 +357,6 @@ button {
   }
   .page_main .profile .inner .info .tablet .profileDetail p {
     margin-bottom: 20px;
-    font-size: 1.5em;
-  }
-  .page_main .profile .inner .info .tablet .list {
-    font-size: 1.5em;
   }
   .page_main .profile .inner .info figure .thumbs {
     display: grid;
@@ -459,7 +471,6 @@ button {
   color: #fff;
   left: 0;
   top: 0;
-  transition: 0.8s;
   transform: translateX(-100%);
   z-index: 1001;
   box-sizing: border-box;
@@ -522,7 +533,6 @@ button {
   top: 1em;
   opacity: 0;
   transform: translateX(20px);
-  transition: all 0.4s 0.8s;
 }
 .page_main .gallery .view_detail .contents .close::before, .page_main .gallery .view_detail .contents .close::after {
   position: absolute;

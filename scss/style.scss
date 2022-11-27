@@ -7,7 +7,12 @@ $pc : 1200;
 $tablet : 640;
 $mobile : 480;
 // $ios :375;
-
+html {scroll-behavior: smooth;} 
+html, body {
+    width:100%;
+    overflow-x:hidden;
+   
+}
 body{ 
     color: #2f2f2f;
     font-family: 'Roboto', sans-serif; 
@@ -20,9 +25,19 @@ body{
 .page_main { 
     .area {
         height:100vh;
+        height: calc(var(--vh, 1vh) * 100);
         @include flex(center,center);
     }
 } 
+
+@include media($tablet) {
+
+    .page_main .profile {
+        height:auto;
+    }
+    
+   
+}
 
 %base {
     width:100%; 
