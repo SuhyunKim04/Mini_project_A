@@ -68,6 +68,17 @@ button {
   overflow: hidden;
 }
 
+.dimm {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 1000;
+}
+
 .page_header {
   position: absolute;
   left: 0;
@@ -78,7 +89,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 1001;
   transition: 0.4s;
   color: rgb(0, 0, 0);
 }
@@ -134,10 +145,12 @@ button {
   .page_header .white {
     position: fixed;
     background-color: #fff;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 100vh;
     right: 0;
     top: 0;
+    transform: translateX(100%);
     transition: 0.5s;
   }
   .page_header .white.open {
@@ -437,16 +450,6 @@ button {
 .page_main .gallery .list li:hover a span {
   transform: translateY(0);
   opacity: 1;
-}
-.page_main .gallery .dimm {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  z-index: 1000;
 }
 .page_main .gallery .view_detail {
   position: fixed;

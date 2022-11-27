@@ -33,6 +33,16 @@ viewProfile();
 // for(let i = 0; i < 15; i++) {
 
 // }
+
+const dimm = document.querySelector('.dimm')
+const openDimm = () => {
+    dimm.style.display = 'block'
+}
+
+const closeDimm = () => { 
+    dimm.style.display = 'none'
+}
+
  
 const datas = [
     {
@@ -289,7 +299,7 @@ const viewDetail = () => {
         const section = document.querySelector('.gallery') 
         return section.offsetTop;
     } 
-    const dimm = document.querySelector('.dimm')
+
     const position = getOffset()
 
     lists.forEach( (e,idx) => { 
@@ -298,31 +308,51 @@ const viewDetail = () => {
              if( target.nodeName == 'A') {
                 window.scrollTo(0, position);
                 view.classList.add('open')
-                dimm.style.display = 'block'
+                openDimm();
                 
                 setDetail(idx);
 
 
-             }  
+            }  
         })
         
     })
+
     
     const close = document.querySelector('.close')
     close.addEventListener('click',(e) => {
         view.classList.remove('open')
-        dimm.style.display = 'none'
+        closeDimm();
     })
     const closeBottom = document.querySelector('.closeBottom')
     closeBottom.addEventListener('click', (e) => {
         view.classList.remove('open')
-        dimm.style.display = 'none'
+        closeDimm();
     })
 }
 
 
 
 viewDetail();
+
+const viewWhite = () => {
+    const white = document.querySelector('.white')
+    const whiteBtn = document.querySelector('.btnHam')
+    
+
+    whiteBtn.addEventListener('click', (e) => {
+        white.classList.add('open')
+        openDimm();
+    })
+
+    dimm.addEventListener('click', (e) => {
+        white.classList.remove('open')
+        closeDimm();
+    })
+
+}
+
+viewWhite();
 // for (let data of datas){
 //     console.log(data.title)
 // }
@@ -473,6 +503,5 @@ const contactMe = () => {
  
 
 contactMe();
- 
 
- 
+

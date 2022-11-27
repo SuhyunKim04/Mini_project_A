@@ -47,12 +47,7 @@
         }
       }
     }
-    .dimm {
-      @include full(fixed);
-      background: rgba(0, 0, 0, 0.7);
-      display: none;
-      z-index: 1000;
-    }
+    
     .view_detail{ 
       position: fixed;
       background-color: #222;
