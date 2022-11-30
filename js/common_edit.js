@@ -5,6 +5,16 @@ function setVh () {
 
 setVh();
 
+const whole = () => {
+    const body = document.body;
+    const lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        console.log(window.pageYOffset);
+    })
+}
+
+whole();
 
 function scrollHeader () {
     const header = document.querySelector('.page_header')
