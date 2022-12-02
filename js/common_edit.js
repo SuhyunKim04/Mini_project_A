@@ -5,16 +5,24 @@ function setVh () {
 
 setVh();
 
-const whole = () => {
-    const body = document.body;
-    const lastScroll = 0;
+function mainNav () {
+    const gnb = document.querySelector('.gnb')
+    const menu = document.querySelectorAll('.menu')
+    const scrollNumber = () => {
+        const nums = [0, 1, 2, 3, 4,]
+        const firstTop = menu[0].offsetTop
+        const secondTop = menu[1].offsetTop
 
-    window.addEventListener('scroll', () => {
-        console.log(window.pageYOffset);
-    })
+        menu.forEach((e, idx) => {
+            e.addEventListener('click', (e) => {
+               window.scroll({top:firstTop, behavior: 'smooth'})
+                 
+            })
+        })
+    }
 }
 
-whole();
+mainNav();
 
 function scrollHeader () {
     const header = document.querySelector('.page_header')
