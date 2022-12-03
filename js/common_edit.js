@@ -5,26 +5,49 @@ function setVh () {
 
 setVh();
 
-function mainNav () {
+const mainNav = () => {
     const gnb = document.querySelector('.gnb')
-    const menu = document.querySelectorAll('.menu')
-    const scrollNumber = () => {
-        const nums = [0, 1, 2, 3, 4,]
-        const firstTop = menu[0].offsetTop
-        const secondTop = menu[1].offsetTop
+    const menus = gnb.querySelectorAll('.menu')
+    const areas = document.querySelectorAll('.area')
+    console.log(areas[2].offsetTop)
 
-        menu.forEach((e, idx) => {
-            e.addEventListener('click', (e) => {
-               window.scroll({top:firstTop, behavior: 'smooth'})
+    const scrollNumber = () => {
+        
+        menus.forEach((e, idx) => { 
+            e.addEventListener('click', () => { 
+                const moveTop = areas[idx].offsetTop
+                console.log(idx)
+                console.log(areas[idx].offsetTop)
+                window.scroll({top:moveTop, behavior: 'smooth'})
                  
             })
         })
     }
+
+    // const moveToScroll = () => {
+    //     for(let i =0; i < menus.length; i++) {
+    //         menus[i].addEventListener('click', () => {
+    //             const moveTop = areas[i].offsetTop
+    //             window.scroll({top:moveTop, behavior: 'smooth'})
+    //         })
+    //     }
+    // }
+
+    scrollNumber();
+    // moveToScroll();
 }
 
+/*
+const test = document.querySelector('.menu.test');
+test.addEventListener('click', (e) => {
+    e.preventDefault;
+    console.log('hh')
+})
+
+*/
 mainNav();
 
-function scrollHeader () {
+const scrollHeader = () => {
     const header = document.querySelector('.page_header')
     window.addEventListener('scroll', () => {
         console.log(window.pageYOffset);
