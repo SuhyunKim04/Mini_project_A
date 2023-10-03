@@ -364,20 +364,7 @@ window.addEventListener('resize', function() {
     viewDetail();
 })
 
-// const setSkillsValue = () => {
-//     const bars = document.querySelectorAll('.pro')
-//     const btn = document.querySelector('.show-value')
 
-//     const showValues = () => {
-//         bars.forEach((e, idx) => {
-//             e.value = e.nextElementSibling.innerHTML 
-//             console.log(idx, e.value)
-//         })
-//     }
-//     btn.addEventListener('click', showValues)
-
-// }
-// setSkillsValue();
 
 
 
